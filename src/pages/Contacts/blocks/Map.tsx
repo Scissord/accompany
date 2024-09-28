@@ -21,15 +21,16 @@ const markerPosition = {
 
 const Map: FC = () => {
   return (
-    <LoadScript googleMapsApiKey="test">
-      <GoogleMap
-        mapContainerStyle={mapContainerStyle}
-        center={center}
-        zoom={12}
-      >
-        <Marker position={markerPosition} />
-      </GoogleMap>
-    </LoadScript>
+    <></>
+    // <LoadScript googleMapsApiKey="test">
+    //   <GoogleMap
+    //     mapContainerStyle={mapContainerStyle}
+    //     center={center}
+    //     zoom={12}
+    //   >
+    //     <Marker position={markerPosition} />
+    //   </GoogleMap>
+    // </LoadScript>
   );
 };
 

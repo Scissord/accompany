@@ -8,7 +8,7 @@ const Contacts: FC = () => {
   return (
     <>
       <Header/>
-      <Map/>
+      {/* <Map/> */}
       <Form/>
       <Footer/>
     </>
