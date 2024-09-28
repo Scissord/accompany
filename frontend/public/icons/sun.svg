@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_Слой_2" data-name="Слой 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.88 22.88">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #fff;
+        stroke-linecap: round;
+        stroke-miterlimit: 10;
+      }
+    </style>
+  </defs>
+  <g id="_Слой_1-2" data-name="Слой 1">
+    <g>
+      <circle class="cls-1" cx="11.44" cy="11.44" r="4.06"/>
+      <line class="cls-1" x1="11.44" y1=".5" x2="11.44" y2="4.19"/>
+      <line class="cls-1" x1="11.44" y1="18.68" x2="11.44" y2="22.38"/>
+      <line class="cls-1" x1="19.17" y1="3.7" x2="16.56" y2="6.32"/>
+      <line class="cls-1" x1="6.32" y1="16.56" x2="3.7" y2="19.17"/>
+      <line class="cls-1" x1="22.38" y1="11.44" x2="18.68" y2="11.44"/>
+      <line class="cls-1" x1="4.19" y1="11.44" x2=".5" y2="11.44"/>
+      <line class="cls-1" x1="19.17" y1="19.17" x2="16.56" y2="16.56"/>
+      <line class="cls-1" x1="6.32" y1="6.32" x2="3.7" y2="3.7"/>
+    </g>
+  </g>
+</svg>

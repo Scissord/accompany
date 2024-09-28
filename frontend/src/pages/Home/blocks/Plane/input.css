@@ -1,0 +1,60 @@
+.input-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.first-input {
+  height: 3.5rem;
+  padding: 0.5rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(3 53 90 / var(--tw-bg-opacity));
+  border: 1px solid white;
+  border-right: none;
+  color: white;
+}
+
+.second-input {
+  height: 3.5rem;
+  padding: 0.5rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(3 53 90 / var(--tw-bg-opacity));
+  border: 1px solid white;
+  border-left: none;
+  color: white;
+}
+
+.right-border-right-top {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 1px;
+  height: 10px;
+  background-color: white;
+}
+
+.right-border-right-bottom {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 1px;
+  height: 10px;
+  background-color: white;
+}
+
+.right-border-left-top {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1px;
+  height: 10px;
+  background-color: white;
+}
+
+.right-border-left-bottom {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 1px;
+  height: 10px;
+  background-color: white;
+}
