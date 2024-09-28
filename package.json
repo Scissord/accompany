@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://Scissord.github.io/accompany",
+  "homepage": "https://scissord.github.io/accompany",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
