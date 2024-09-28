@@ -21,7 +21,7 @@ const markerPosition = {
 
 const Map: FC = () => {
   return (
-    <LoadScript googleMapsApiKey="AIzaSyBDpqU8ar_gvAzdg5nUuHjllKV85d6Z-F4">
+    <LoadScript googleMapsApiKey="test">
       <GoogleMap
         mapContainerStyle={mapContainerStyle}
         center={center}
