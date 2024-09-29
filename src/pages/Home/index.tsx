@@ -7,7 +7,7 @@
   import Partners from "./blocks/Partners";
   import Form from "./blocks/Form";
   import Events from "./blocks/Events";
-  import Footer from "./blocks/Footer";
+  import { Footer } from "@components";
 
   const Home: FC = () => {
     return (

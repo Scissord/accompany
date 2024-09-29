@@ -11,7 +11,7 @@ const Create: FC = () => {
   };
 
   return (
-    <section className="relative lg:bg-[url('pages/about/create-bg.png')] lg:bg-cover lg:bg-center text-white">
+    <section className="relative bg-[url('pages/about/create-bg.png')] bg-cover bg-center text-white">
       <div className="absolute inset-0 bg-gradient-to-r w-0 lg:w-1/2 from-[#7c7c7c] via-[#bdbbbc] to-transparent" />
       <div
         ref={ref}

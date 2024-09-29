@@ -1,6 +1,6 @@
 import { FC } from "react";
 
-const Footer: FC = () => {
+export const Footer: FC = () => {
   return (
     <footer className="h-[55vh] lg:h-[40vh] bg-brand-100 py-12 lg:py-20 relative">
       <div
@@ -44,7 +44,5 @@ const Footer: FC = () => {
         </div>
       </div>
     </footer>
-  )
-}
-
-export default Footer;
+  );
+};

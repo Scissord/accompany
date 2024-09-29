@@ -1,28 +1,20 @@
 import { FC } from "react";
-import { useNavigate } from "react-router-dom";
-import Navbar from "./Header/Navbar";
-import Settings from "./Header/Settings";
-import Mobile from "./Header/Mobile";
+import { Navbar, NavbarMobile, HeaderSettings, HeaderLogo } from "@components";
 
 const Header: FC = () => {
-  const navigate = useNavigate();
-
   return (
-    <header className="h-[85vh] lg:h-[40vh] relative lg:bg-[url('pages/charters/header_bg.png')] lg:bg-cover lg:bg-bottom text-white">
-      <div className="absolute inset-0 bg-stone-600 bg-opacity-70" />
-      <div className="container mx-auto hidden lg:fijb pt-6">
-        <img
-          onClick={() => navigate('/')}
-          src="logo.png"
-          className="w-[10%] cursor-pointer z-30"
-          alt="logo"
-        />
+    <header className="sticky top-0 z-30 lg:relative h-[8vh] lg:h-[40vh] bg-dbg text-white lg:bg-[url('pages/charters/header_bg.png')] lg:bg-cover lg:bg-bottom fijb lg:block">
+      <div className="hidden lg:block absolute inset-0 bg-stone-600 bg-opacity-70" />
+      <div className="container mx-auto hidden lg:fijb lg:pt-6">
+        <HeaderLogo/>
         <Navbar/>
-        <Settings/>
+        <HeaderSettings/>
       </div>
-      <Mobile/>
+      <NavbarMobile/>
     </header>
   );
 };
+
+
 
 export default Header;

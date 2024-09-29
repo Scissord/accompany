@@ -2,7 +2,7 @@ import { FC } from 'react'
 import Header from './blocks/Header';
 import Cards from './blocks/Cards';
 import Form from './blocks/Form';
-import Footer from './blocks/Footer';
+import { Footer } from '@components';
 
 const Charters: FC = () => {
   return (

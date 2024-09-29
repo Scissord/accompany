@@ -1,11 +1,11 @@
 import { FC } from 'react'
 import { useViewContext } from '@context';
 
-const Settings: FC = () => {
+export const HeaderSettings: FC = () => {
   const context = useViewContext();
 
   return (
-    <div className="fi gap-6">
+    <div className="fi gap-6 z-30">
       <p>RU</p>
       <img
         src="icons/sun.svg"
@@ -16,5 +16,3 @@ const Settings: FC = () => {
     </div>
   );
 };
-
-export default Settings;

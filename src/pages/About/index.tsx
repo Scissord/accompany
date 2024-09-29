@@ -6,7 +6,7 @@ import Services from "./blocks/Services";
 import Partners from "./blocks/Partners";
 import WhyUs from "./blocks/WhyUs";
 import Form from "./blocks/Form";
-import Footer from "./blocks/Footer";
+import { Footer } from "@components";
 
 const About: FC = () => {
   return (

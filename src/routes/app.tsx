@@ -11,7 +11,7 @@ const AppRoutes: IRoute[] = [
 		title: "Главная",
 	},
   {
-		path: "/accompany/pabout",
+		path: "/accompany/about",
 		element: <About/>,
 		title: "О нас",
 	},

@@ -6,7 +6,7 @@ const css = {
   link: 'cursor-pointer',
 };
 
-const Mobile: FC = () => {
+export const NavbarMobile: FC = () => {
   const navigate = useNavigate();
   const [isSidebarOpen, setIsSidebarOpen] = useState<boolean>(false);
 
@@ -17,7 +17,12 @@ const Mobile: FC = () => {
   return (
     <>
       <div className="container mx-auto fijb lg:hidden px-6">
-        <img src="logo.png" className="w-[24%]" alt="logo"/>
+        <img
+          src="logo.png"
+          onClick={() => navigate('/accompany/')}
+          className="w-[24%]"
+          alt="logo"
+        />
         <div className="cursor-pointer" onClick={handleMenuClick}>
           <IconThMenuOutline/>
         </div>
@@ -33,11 +38,11 @@ const Mobile: FC = () => {
           >
             <div className="text-lg font-bold">Меню</div>
             <nav className="space-y-4 mt-8">
-              <p className={css.link} onClick={() => navigate("/about")}>О компании</p>
-              <p className={css.link} onClick={() => navigate("/charters")}>Пассажирский чартер</p>
-              <p className={css.link} onClick={() => navigate("/charters")}>Грузовой чартер</p>
-              <p className={css.link} onClick={() => navigate("/charters")}>VIP-чартер</p>
-              <p className={css.link} onClick={() => navigate("/contacts")}>Контакты</p>
+              <p className={css.link} onClick={() => navigate("/accompany/about")}>О компании</p>
+              <p className={css.link} onClick={() => navigate("/accompany/charters")}>Пассажирский чартер</p>
+              <p className={css.link} onClick={() => navigate("/accompany/charters")}>Грузовой чартер</p>
+              <p className={css.link} onClick={() => navigate("/accompany/charters")}>VIP-чартер</p>
+              <p className={css.link} onClick={() => navigate("/accompany/contacts")}>Контакты</p>
             </nav>
           </motion.div>
 
@@ -54,8 +59,6 @@ const Mobile: FC = () => {
     </>
   );
 };
-
-export default Mobile;
 
 function IconThMenuOutline() {
   return (
