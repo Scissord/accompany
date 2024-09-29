@@ -6,22 +6,22 @@ import Contacts from '@pages/Contacts';
 
 const AppRoutes: IRoute[] = [
   {
-		path: "/",
+		path: "/accompany",
 		element: <Home/>,
 		title: "Главная",
 	},
   {
-		path: "/about",
+		path: "/accompany/pabout",
 		element: <About/>,
 		title: "О нас",
 	},
   {
-		path: "/charters",
+		path: "/accompany/charters",
 		element: <Charters/>,
 		title: "Авиагид",
 	},
   {
-    path: "/contacts",
+    path: "/accompany/contacts",
 		element: <Contacts/>,
 		title: "Контакты",
   }
