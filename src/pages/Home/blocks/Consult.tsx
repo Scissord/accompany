@@ -11,7 +11,7 @@ const Consult: FC = () => {
   };
 
   return (
-    <section className="relative lg:bg-[url('pages/main/consult-bg.png')] lg:bg-cover lg:bg-center h-[90vh] lg:h-[60vh] bg-gbg text-white">
+    <section className="relative lg:bg-[url('pages/main/consult-bg.png')] lg:bg-cover lg:bg-center h-[80vh] lg:h-[60vh] bg-gbg text-white">
       <div className="absolute inset-0 bg-gradient-to-r w-0 lg:w-1/3 from-brand-300 via-brand-100 to-transparent" />
       <div
         ref={ref}

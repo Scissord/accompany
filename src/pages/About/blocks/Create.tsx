@@ -11,11 +11,11 @@ const Create: FC = () => {
   };
 
   return (
-    <section className="relative bg-[url('pages/about/create-bg.png')] bg-cover bg-center text-white">
+    <section className="relative lg:bg-[url('pages/about/create-bg.png')] lg:bg-cover lg:bg-center bg-dbg text-white">
       <div className="absolute inset-0 bg-gradient-to-r w-0 lg:w-1/2 from-[#7c7c7c] via-[#bdbbbc] to-transparent" />
       <div
         ref={ref}
-        className="container mx-auto h-full flex flex-col justify-center py-12"
+        className="container mx-auto h-full flex flex-col justify-center py-12 px-8 lg:px-0 "
       >
         <motion.h1
           className="text-3xl font-bold z-10"

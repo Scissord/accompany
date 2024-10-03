@@ -4,8 +4,8 @@ const WhyUs: FC = () => {
   return (
     <section className='relative bg-gray-100'>
       <div className="container mx-auto py-20 flex flex-col gap-12">
-        <p className="text-3xl text-brand-300">Почему мы?</p>
-        <div className='flex items-center justify-between'>
+        <p className="text-3xl text-brand-300 text-center lg:text-left">Почему мы?</p>
+        <div className='flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-0'>
           <div className='flex flex-col items-start gap-4'>
             <img src='icons/timer.svg' className='h-24' alt="timer"/>
             <p className='text-2xl'>Срочные вылеты</p>
@@ -31,7 +31,7 @@ const WhyUs: FC = () => {
             </p>
           </div>
         </div>
-        <div className='flex items-center justify-between'>
+        <div className='flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-0'>
           <div className='flex flex-col items-start gap-4'>
             <img src='icons/certificate-check.svg' className='h-24' alt="check"/>
             <p className='text-2xl'>Срочные вылеты</p>

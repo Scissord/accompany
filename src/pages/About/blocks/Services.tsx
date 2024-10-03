@@ -4,8 +4,8 @@ const Services: FC = () => {
   return (
     <section className="relative bg-white">
       <div className='flex w-full'>
-        <div className="w-2/5 bg-[url('pages/about/cards-bg.png')] bg-cover bg-top bg-no-repeat"/>
-        <div className='w-3/5 px-28 py-16 bg-brand-100 flex flex-col gap-6 text-white'>
+        <div className="w-0 lg:w-2/5 bg-[url('pages/about/cards-bg.png')] bg-cover bg-top bg-no-repeat"/>
+        <div className='w-full lg:w-3/5 px-8 lg:px-28 py-16 bg-brand-100 flex flex-col gap-6 text-white'>
           <h1 className='text-2xl font-semibold'>НАШИ УСЛУГИ
             <span className='font-normal ml-2'>
               &#9679; ПАССАЖИРСКИЙ ЧАРТЕР
@@ -18,7 +18,7 @@ const Services: FC = () => {
             цели поездки, поможем выбрать идеальный вариант.
           </p>
           <div className='flex flex-col gap-3'>
-            <div className="flex items-center gap-6">
+            <div className="flex flex-wrap items-center gap-6">
               <div className="px-4 py-1 border border-slate-400">
                 <p>{"Empty legs"}</p>
               </div>
@@ -57,7 +57,7 @@ const Services: FC = () => {
         </div>
       </div>
       <div className='flex w-full'>
-        <div className='w-3/5 px-28 py-16 bg-brand-100 flex flex-col gap-6 text-white'>
+        <div className='w-full lg:w-3/5 px-8 lg:px-28 py-16 bg-brand-100 flex flex-col gap-6 text-white'>
           <h1 className='text-2xl font-semibold'>НАШИ УСЛУГИ
             <span className='font-normal ml-2'>
               &#9679; ПАССАЖИРСКИЙ ЧАРТЕР
@@ -70,7 +70,7 @@ const Services: FC = () => {
             цели поездки, поможем выбрать идеальный вариант.
           </p>
           <div className='flex flex-col gap-3'>
-            <div className="flex items-center gap-6">
+            <div className="flex flex-wrap items-center gap-6">
               <div className="px-4 py-1 border border-slate-400">
                 <p>{"Empty legs"}</p>
               </div>
@@ -107,11 +107,11 @@ const Services: FC = () => {
             </p>
           </div>
         </div>
-        <div className="w-2/5 bg-[url('pages/about/cards-bg.png')] bg-cover bg-center bg-no-repeat"/>
+        <div className="w-0 lg:w-2/5 bg-[url('pages/about/cards-bg.png')] bg-cover bg-center bg-no-repeat"/>
       </div>
       <div className='flex w-full'>
-        <div className="w-2/5 bg-[url('pages/about/cards-bg.png')] bg-cover bg-bottom bg-no-repeat"/>
-        <div className='w-3/5 px-28 py-16 bg-brand-100 flex flex-col gap-6 text-white'>
+        <div className="w-0 lg:w-2/5 bg-[url('pages/about/cards-bg.png')] bg-cover bg-bottom bg-no-repeat"/>
+        <div className='w-full lg:w-3/5 px-8 lg:px-28 py-16 bg-brand-100 flex flex-col gap-6 text-white'>
           <h1 className='text-2xl font-semibold'>НАШИ УСЛУГИ
             <span className='font-normal ml-2'>
               &#9679; ПАССАЖИРСКИЙ ЧАРТЕР
@@ -124,7 +124,7 @@ const Services: FC = () => {
             цели поездки, поможем выбрать идеальный вариант.
           </p>
           <div className='flex flex-col gap-3'>
-            <div className="flex items-center gap-6">
+            <div className="flex flex-wrap items-center gap-6">
               <div className="px-4 py-1 border border-slate-400">
                 <p>{"Empty legs"}</p>
               </div>
