@@ -1,5 +1,5 @@
-import { FC, useRef } from 'react';
-import { motion, useInView } from 'framer-motion';
+import { FC, useRef } from "react";
+import { motion, useInView } from "framer-motion";
 
 const Title: FC = () => {
   const ref = useRef(null);
@@ -23,15 +23,18 @@ const Title: FC = () => {
         variants={textVariants}
         transition={{ duration: 0.8, delay: 0.2 }}
       >
-        Ваш чартер.<br /> Ваши границы
+        Ваш чартер.
+        <br /> Ваши границы
       </motion.h1>
       <motion.p
         className="mt-4"
         variants={textVariants}
         transition={{ duration: 0.8, delay: 0.5 }}
       >
-        Мы предлагаем чартерные перелеты на частных<br />
-        и бизнес-джетах по всему миру, обеспечивая<br />
+        Мы предлагаем чартерные перелеты на частных
+        <br />
+        и бизнес-джетах по всему миру, обеспечивая
+        <br />
         высокий уровень сервиса и конфиденциальности.
       </motion.p>
     </motion.div>
