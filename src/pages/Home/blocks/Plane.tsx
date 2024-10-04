@@ -1,18 +1,11 @@
 import { FC } from "react";
 import Title from "./Plane/Title";
 import Menu from "./Plane/Menu";
+import "./Plane/plane.css";
 
 const Plane: FC = () => {
   return (
-    <section
-      className="h-[40vh] lg:h-[65vh] bg-dbg relative text-white"
-      style={{
-        backgroundImage: `url('pages/main/avia_head.png')`,
-        backgroundRepeat: "no-repeat",
-        backgroundPosition: "right",
-        backgroundSize: "43%",
-      }}
-    >
+    <section className="plane">
       <Title />
       <Menu />
     </section>

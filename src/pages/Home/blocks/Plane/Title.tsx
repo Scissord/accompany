@@ -13,13 +13,13 @@ const Title: FC = () => {
   return (
     <motion.div
       ref={ref}
-      className="container mx-auto px-8 lg:px-44 h-full flex flex-col items-start justify-center"
+      className="container mx-auto px-8 h-full py-12 lg:py-0"
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
       transition={{ duration: 0.8, ease: "easeInOut" }}
     >
       <motion.h1
-        className="text-3xl sm:text-5xl font-bold"
+        className="text-4xl sm:text-6xl font-bold"
         variants={textVariants}
         transition={{ duration: 0.8, delay: 0.2 }}
       >
@@ -27,7 +27,7 @@ const Title: FC = () => {
         <br /> Ваши границы
       </motion.h1>
       <motion.p
-        className="mt-4"
+        className="mt-4 text-xl"
         variants={textVariants}
         transition={{ duration: 0.8, delay: 0.5 }}
       >

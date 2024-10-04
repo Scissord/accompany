@@ -1,0 +1,15 @@
+.steps {
+  position: relative;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+@media (min-width: 1024px) {
+  .steps {
+    background-image: url("pages/main/steps-bg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    object-fit: cover;
+  }
+}

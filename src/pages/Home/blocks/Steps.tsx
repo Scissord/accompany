@@ -1,6 +1,7 @@
 import { FC } from "react";
 import Content from "./Steps/Content";
 import Mobile from "./Steps/Mobile";
+import './Steps/steps.css';
 
 const steps = [
   {
@@ -49,10 +50,10 @@ const steps = [
 
 const Steps: FC = () => {
   return (
-    <section className="relative bg-center bg-cover bg-[url('pages/main/steps-bg.png')] bg-gray-200 ">
+    <section className="steps">
       <div className="absolute inset-0 bg-stone-400 bg-opacity-70" />
       <div className="absolute inset-0 bg-gray-700 bg-opacity-50" />
-      <div className="relative z-10 text-center py-12">
+      <div className="relative z-10 text-center">
         <p className="text-3xl text-white mb-12">Почему мы?</p>
         <Content steps={steps}/>
         <Mobile steps={steps}/>

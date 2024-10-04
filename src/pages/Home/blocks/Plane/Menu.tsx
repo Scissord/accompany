@@ -1,33 +1,28 @@
-import { FC, useState } from 'react'
+import { FC, useState } from "react";
 import DatePicker from "react-datepicker";
-import MenuTop from './MenuTop';
-import Wrapper from './Wrapper';
+import MenuTop from "./MenuTop";
+import Wrapper from "./Wrapper";
 import "react-datepicker/dist/react-datepicker.css";
-import './input.css';
-import './select.css';
+import "./input.css";
+import "./select.css";
 
 const options = [
-  { value: '1', label: '1 пассажир' },
-  { value: '2', label: '2 пассажира' }
+  { value: "1", label: "1 пассажир" },
+  { value: "2", label: "2 пассажира" },
 ];
 
 const Menu: FC = () => {
   const [startDate, setStartDate] = useState<Date | null>(new Date());
 
   return (
-    <div
-      className="bg-brand-300 rounded pt-4 pb-8 px-6 hidden lg:block z-10 absolute bottom-[-90px] left-1/2 transform -translate-x-1/2"
-    >
-      <MenuTop/>
+    <div className="container mx-8 bg-brand-300 rounded pt-4 pb-8 px-6 hidden lg:block z-10 absolute bottom-[-90px] left-1/2 transform -translate-x-1/2">
+      <MenuTop />
       <div className="flex items-center justify-center gap-3 mt-4">
         <div className="flex justify-center gap-3">
-          <div className='flex items-center gap-3'>
+          <div className="flex items-center gap-3">
             <Wrapper title={"Откуда"} bottom={"Алматы, Казахстан"}>
               <div className="input-wrapper">
-                <input
-                  className="first-input"
-                  type="text"
-                />
+                <input className="first-input" type="text" />
                 <div className="right-border-right-top"></div>
                 <div className="right-border-right-bottom"></div>
               </div>
@@ -40,10 +35,7 @@ const Menu: FC = () => {
 
             <Wrapper title={"Куда"} bottom={"Москва, Россия"}>
               <div className="input-wrapper">
-                <input
-                  className="second-input"
-                  type="text"
-                />
+                <input className="second-input" type="text" />
                 <div className="right-border-left-top"></div>
                 <div className="right-border-left-bottom"></div>
               </div>
@@ -54,7 +46,7 @@ const Menu: FC = () => {
             <DatePicker
               selected={startDate}
               onChange={(date) => setStartDate(date)}
-              className='h-14 p-2 bg-brand-300 border border-white w-[150px]'
+              className="h-14 p-2 bg-brand-300 border border-white w-[200px]"
             />
             <img
               className="w-4 absolute bottom-11 right-3"
@@ -65,7 +57,7 @@ const Menu: FC = () => {
 
           <Wrapper title={"Пассажиры"}>
             <Select options={options} />
-            <IconChevronDown className='absolute z-10 right-3 top-11'/>
+            <IconChevronDown className="absolute z-10 right-3 top-11" />
           </Wrapper>
         </div>
 
@@ -83,8 +75,11 @@ type SelectProps = {
   options: any;
 };
 
-const Select: FC<SelectProps>  = ({ options }) => {
-  const [selectedOption, setSelectedOption] = useState<any>({ value: '1', label: '1 пассажир' },);
+const Select: FC<SelectProps> = ({ options }) => {
+  const [selectedOption, setSelectedOption] = useState<any>({
+    value: "1",
+    label: "1 пассажир",
+  });
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   const handleOptionClick = (option: any) => {
@@ -93,12 +88,12 @@ const Select: FC<SelectProps>  = ({ options }) => {
   };
 
   return (
-    <div className="relative w-[150px]">
+    <div className="relative w-[200px]">
       <div
         className="h-14 p-2 bg-brand-300 border border-white cursor-pointer flex items-center justify-start"
         onClick={() => setIsOpen(!isOpen)}
       >
-        {selectedOption ? selectedOption.label : ''}
+        {selectedOption ? selectedOption.label : ""}
       </div>
       {isOpen && (
         <div className="absolute z-10 bg-brand-300 border border-white mt-1 w-full">
@@ -132,4 +127,4 @@ function IconChevronDown(props: React.SVGProps<SVGSVGElement>) {
       />
     </svg>
   );
-};
+}
