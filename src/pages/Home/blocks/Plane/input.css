@@ -1,9 +1,12 @@
 .input-wrapper {
   position: relative;
   display: inline-block;
+  background-color: aqua;
 }
 
 .first-input {
+  width: 280px;
+  background-color: aqua;
   height: 3.5rem;
   padding: 0.5rem;
   --tw-bg-opacity: 1;
@@ -14,6 +17,7 @@
 }
 
 .second-input {
+  width: 280px;
   height: 3.5rem;
   padding: 0.5rem;
   --tw-bg-opacity: 1;

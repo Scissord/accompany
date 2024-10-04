@@ -1,5 +1,6 @@
 import { FC, useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import './Consult/consult.css';
 
 const Consult: FC = () => {
   const ref = useRef(null);
@@ -11,14 +12,14 @@ const Consult: FC = () => {
   };
 
   return (
-    <section className="relative lg:bg-[url('pages/main/consult-bg.png')] lg:bg-cover lg:bg-center h-[80vh] lg:h-[60vh] bg-gbg text-white">
-      <div className="absolute inset-0 bg-gradient-to-r w-0 lg:w-1/3 from-brand-300 via-brand-100 to-transparent" />
+    <section className="consult">
+      <div className="absolute inset-0 bg-gradient-to-r w-0 lg:w-5/6 from-brand-300 via-brand-100 to-transparent" />
       <div
         ref={ref}
-        className="container mx-auto px-8 lg:px-32 h-full flex flex-col items-start justify-center pt-0 lg:pt-20"
+        className="container mx-auto px-8 h-full flex flex-col items-start justify-center py-12 lg:py-0"
       >
         <motion.h1
-          className="text-3xl font-bold z-10"
+          className="text-4xl sm:text-4xl font-bold z-10"
           variants={textVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
@@ -27,7 +28,7 @@ const Consult: FC = () => {
           AVIA CONSULTING COMPANY
         </motion.h1>
         <motion.p
-          className="mt-4 z-10"
+          className="mt-4 z-10 text-xl"
           variants={textVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
@@ -37,7 +38,7 @@ const Consult: FC = () => {
           ценит свободу выбора, комфорт и гибкость в путешествиях.
         </motion.p>
         <motion.p
-          className="mt-4 z-10"
+          className="mt-4 z-10 text-xl"
           variants={textVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
@@ -47,7 +48,7 @@ const Consult: FC = () => {
           расписанию, избегая ограничений регулярных рейсов.
         </motion.p>
         <motion.p
-          className="mt-4 z-10"
+          className="mt-4 z-10 text-xl"
           variants={textVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}

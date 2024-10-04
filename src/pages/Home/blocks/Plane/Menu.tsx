@@ -16,7 +16,7 @@ const Menu: FC = () => {
 
   return (
     <div
-      className="bg-brand-300 rounded pt-4 pb-8 px-6 hidden lg:block z-10 absolute bottom-[-90px] left-1/2 transform -translate-x-1/2"
+      className="container mx-8 bg-brand-300 rounded pt-4 pb-8 px-6 hidden lg:block z-10 absolute bottom-[-90px] left-1/2 transform -translate-x-1/2"
     >
       <MenuTop/>
       <div className="flex items-center justify-center gap-3 mt-4">
@@ -54,7 +54,7 @@ const Menu: FC = () => {
             <DatePicker
               selected={startDate}
               onChange={(date) => setStartDate(date)}
-              className='h-14 p-2 bg-brand-300 border border-white w-[150px]'
+              className='h-14 p-2 bg-brand-300 border border-white w-[200px]'
             />
             <img
               className="w-4 absolute bottom-11 right-3"
@@ -93,7 +93,7 @@ const Select: FC<SelectProps>  = ({ options }) => {
   };
 
   return (
-    <div className="relative w-[150px]">
+    <div className="relative w-[200px]">
       <div
         className="h-14 p-2 bg-brand-300 border border-white cursor-pointer flex items-center justify-start"
         onClick={() => setIsOpen(!isOpen)}
