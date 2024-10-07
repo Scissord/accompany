@@ -1,14 +1,14 @@
-import { FC, useState } from 'react'
+import { FC, useState } from "react";
 import DatePicker from "react-datepicker";
-import MenuTop from './MenuTop';
-import Wrapper from './Wrapper';
+import MenuTop from "./MenuTop";
+import Wrapper from "./Wrapper";
 import "react-datepicker/dist/react-datepicker.css";
-import './input.css';
-import './select.css';
+import "./input.css";
+import "./select.css";
 
 const options = [
-  { value: '1', label: '1 пассажир' },
-  { value: '2', label: '2 пассажира' }
+  { value: "1", label: "1 пассажир" },
+  { value: "2", label: "2 пассажира" },
 ];
 
 const Menu: FC = () => {
@@ -18,13 +18,11 @@ const Menu: FC = () => {
   const [passengers, setPassengers] = useState<string>('1 пассажир');
 
   return (
-    <div
-      className="container mx-8 bg-brand-300 rounded pt-4 pb-8 px-6 hidden lg:block z-10 absolute bottom-[-90px] left-1/2 transform -translate-x-1/2"
-    >
-      <MenuTop/>
+    <div className="container mx-8 bg-brand-300 rounded pt-4 pb-8 px-6 hidden lg:block z-10 absolute bottom-[-90px] left-1/2 transform -translate-x-1/2">
+      <MenuTop />
       <div className="flex items-center justify-center gap-3 mt-4">
         <div className="flex justify-center gap-3">
-          <div className='flex items-center gap-3'>
+          <div className="flex items-center gap-3">
             <Wrapper title={"Откуда"} bottom={"Алматы, Казахстан"}>
               <div className="input-wrapper">
                 <input
@@ -158,4 +156,4 @@ function IconChevronDown(props: React.SVGProps<SVGSVGElement>) {
       />
     </svg>
   );
-};
+}

@@ -7,12 +7,18 @@
 @media (min-width: 1024px) {
   .plane {
     min-height: 550px;
-    background-image: url('pages/main/avia_head.png');
+    background-image: url("pages/main/avia_head.png");
     background-repeat: no-repeat;
     background-position: right;
     background-size: 43%;
     display: flex;
     align-items: center;
     justify-content: flex-center;
+  }
+}
+
+@media (min-width: 1536px) {
+  .plane {
+    min-height: 700px;
   }
 }

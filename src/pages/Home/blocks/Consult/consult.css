@@ -1,5 +1,5 @@
 .consult {
-  background-color: #7C7C7C;
+  background-color: #7c7c7c;
   position: relative;
   color: white;
 }
@@ -7,9 +7,10 @@
 @media (min-width: 1024px) {
   .consult {
     min-height: 550px;
-    background-image: url('pages/main/consult-bg.png');
+    background-image: url("pages/main/consult-bg.png");
     background-repeat: no-repeat;
     background-position: center;
+    background-size: 100%;
     object-fit: cover;
     display: flex;
     align-items: center;
