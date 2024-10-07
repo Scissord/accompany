@@ -12,7 +12,10 @@ const options = [
 ];
 
 const Menu: FC = () => {
-  const [startDate, setStartDate] = useState<Date | null>(new Date());
+  const [from, setFrom] = useState<string>("");
+  const [to, setTo] = useState<string>("");
+  const [date, setDate] = useState<Date | null>(new Date());
+  const [passengers, setPassengers] = useState<string>('1 пассажир');
 
   return (
     <div
@@ -25,8 +28,13 @@ const Menu: FC = () => {
             <Wrapper title={"Откуда"} bottom={"Алматы, Казахстан"}>
               <div className="input-wrapper">
                 <input
-                  className="first-input"
                   type="text"
+                  className="first-input"
+                  value={from}
+                  onChange={(e) => {
+                    localStorage.setItem('from', e.target.value);
+                    setFrom(e.target.value)
+                  }}
                 />
                 <div className="right-border-right-top"></div>
                 <div className="right-border-right-bottom"></div>
@@ -41,8 +49,13 @@ const Menu: FC = () => {
             <Wrapper title={"Куда"} bottom={"Москва, Россия"}>
               <div className="input-wrapper">
                 <input
-                  className="second-input"
                   type="text"
+                  className="second-input"
+                  value={to}
+                  onChange={(e) => {
+                    localStorage.setItem('to', e.target.value);
+                    setTo(e.target.value)
+                  }}
                 />
                 <div className="right-border-left-top"></div>
                 <div className="right-border-left-bottom"></div>
@@ -52,8 +65,13 @@ const Menu: FC = () => {
 
           <Wrapper title={"Дата вылета"}>
             <DatePicker
-              selected={startDate}
-              onChange={(date) => setStartDate(date)}
+              selected={date}
+              onChange={(date) => {
+                if(date) {
+                  localStorage.setItem('date', date.toISOString());
+                  setDate(date)
+                }
+              }}
               className='h-14 p-2 bg-brand-300 border border-white w-[200px]'
             />
             <img
@@ -64,7 +82,14 @@ const Menu: FC = () => {
           </Wrapper>
 
           <Wrapper title={"Пассажиры"}>
-            <Select options={options} />
+            <Select
+              value={passengers}
+              onChange={(val) => {
+                localStorage.setItem('passengers', val);
+                setPassengers(val)
+              }}
+              options={options}
+            />
             <IconChevronDown className='absolute z-10 right-3 top-11'/>
           </Wrapper>
         </div>
@@ -80,15 +105,16 @@ const Menu: FC = () => {
 export default Menu;
 
 type SelectProps = {
+  value: string;
+  onChange: (val: string) => void;
   options: any;
 };
 
-const Select: FC<SelectProps>  = ({ options }) => {
-  const [selectedOption, setSelectedOption] = useState<any>({ value: '1', label: '1 пассажир' },);
+const Select: FC<SelectProps>  = ({ value, onChange, options }) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   const handleOptionClick = (option: any) => {
-    setSelectedOption(option);
+    onChange(option.label);
     setIsOpen(false);
   };
 
@@ -98,7 +124,7 @@ const Select: FC<SelectProps>  = ({ options }) => {
         className="h-14 p-2 bg-brand-300 border border-white cursor-pointer flex items-center justify-start"
         onClick={() => setIsOpen(!isOpen)}
       >
-        {selectedOption ? selectedOption.label : ''}
+        {value ? value : ''}
       </div>
       {isOpen && (
         <div className="absolute z-10 bg-brand-300 border border-white mt-1 w-full">
