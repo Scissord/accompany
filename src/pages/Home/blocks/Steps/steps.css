@@ -5,7 +5,7 @@
 
 @media (min-width: 1024px) {
   .steps {
-    background-image: url("pages/main/steps-bg.png");
+    background-image: url("/pages/main/steps-bg.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
