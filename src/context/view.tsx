@@ -1,4 +1,5 @@
 import { createContext, Dispatch, FC, ReactNode, SetStateAction, useContext, useState } from "react";
+import { Modal } from "@components";
 
 interface ViewProps {
   title: string;
@@ -10,6 +11,9 @@ interface ViewContextType {
     get: string;
     set: Dispatch<SetStateAction<string>>;
   };
+  modal: {
+    set: Dispatch<SetStateAction<boolean>>;
+  };
 };
 
 export const useViewContext = () => {
@@ -19,6 +23,7 @@ export const useViewContext = () => {
 export const ViewContext = createContext<ViewContextType | null>(null);
 
 export const View: FC<ViewProps> = ({ title, display }) => {
+  const [modal, setModal] = useState(false);
   const [theme, setTheme] = useState('dark');
 
   const data = {
@@ -26,6 +31,9 @@ export const View: FC<ViewProps> = ({ title, display }) => {
       get: theme,
       set: setTheme,
     },
+    modal: {
+      set: setModal
+    }
   };
 
   document.title = title
@@ -34,6 +42,7 @@ export const View: FC<ViewProps> = ({ title, display }) => {
 
   return (
     <ViewContext.Provider value={{ ...data }}>
+      {modal && <Modal/>}
       <div className={`min-h-[100vh] ${theme === 'dark' ? 'dark' : ''}`}>
         {display}
       </div>

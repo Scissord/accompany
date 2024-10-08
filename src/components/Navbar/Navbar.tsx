@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 const css = {
   link: "cursor-pointer",
+  dropMenuLink: "cursor-pointer hover:bg-gray-300 hover:rounded px-2 py-2",
 };
 
 export const Navbar: FC = () => {
@@ -44,22 +45,23 @@ export const Navbar: FC = () => {
       {hoverAbout && (
         <div
           ref={dropdownRef}
-          className="absolute top-6 left-0 bg-white flex flex-col gap-6 text-black px-2 py-4 rounded"
+          className="absolute top-6 left-0 bg-white flex flex-col text-black rounded"
+          onMouseLeave={() => setHoverAbout(false)}
         >
           <p
-            className={css.link}
+            className={css.dropMenuLink}
             onClick={() => navigate("/accompany/charters")}
           >
             Гид по самолетам
           </p>
           <p
-            className={css.link}
+            className={css.dropMenuLink}
             onClick={() => navigate("/accompany/charters")}
           >
             Новости
           </p>
           <p
-            className={css.link}
+            className={css.dropMenuLink}
             onClick={() => navigate("/accompany/charters")}
           >
             Безопасность

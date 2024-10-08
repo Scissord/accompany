@@ -53,7 +53,7 @@ const Steps: FC = () => {
     <section className="steps">
       <div className="absolute inset-0 bg-stone-400 bg-opacity-70" />
       <div className="absolute inset-0 bg-gray-700 bg-opacity-50" />
-      <div className="relative z-10 text-center">
+      <div className="relative z-10 text-center py-12">
         <p className="text-3xl text-white mb-12">Почему мы?</p>
         <Content steps={steps}/>
         <Mobile steps={steps}/>
