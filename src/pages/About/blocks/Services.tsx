@@ -4,17 +4,17 @@ const Services: FC = () => {
   return (
     <section className="relative bg-white">
       <div className='flex w-full'>
-        <div className="w-0 lg:w-2/5 bg-[url('pages/about/cards-bg.png')] bg-cover bg-top bg-no-repeat"/>
-        <div className='w-full lg:w-3/5 px-8 lg:px-28 py-16 bg-brand-100 flex flex-col gap-6 text-white'>
+        <div className="w-0 lg:w-2/5 bg-[url('/pages/about/cards-bg.png')] bg-cover bg-top bg-no-repeat"/>
+        <div className='w-full lg:w-3/5 px-8 lg:px-28 py-12 bg-brand-100 flex flex-col gap-6 text-white'>
           <h1 className='text-2xl font-semibold'>НАШИ УСЛУГИ
             <span className='font-normal ml-2'>
               &#9679; ПАССАЖИРСКИЙ ЧАРТЕР
             </span>
           </h1>
           <p>
-            Доверьтесь нам в организации чартерных рейсов для вашего бизнеса<br/>
-            или личных потребностей! От перевозок персонала до спортивных и<br/>
-            гастрольных чартеров, мы предлагаем множество услуг. Независимо от<br/>
+            Доверьтесь нам в организации чартерных рейсов для вашего бизнеса
+            или личных потребностей! От перевозок персонала до спортивных и
+            гастрольных чартеров, мы предлагаем множество услуг. Независимо от
             цели поездки, поможем выбрать идеальный вариант.
           </p>
           <div className='flex flex-col gap-3'>
@@ -42,7 +42,7 @@ const Services: FC = () => {
 
           <div className="w-full border border-white" />
           <p className='italic'>
-            Услуга компании подходит для деловых поездок, отдыха и организации<br/>
+            Услуга компании подходит для деловых поездок, отдыха и организации
             спортивных и гастрольных туров.
           </p>
           <div className='flex items-center gap-6'>
@@ -50,23 +50,23 @@ const Services: FC = () => {
               Оставить заявку
             </button>
             <p className='text-xs'>
-              Если хотите обсудить сотрудничество,<br/>
+              Если хотите обсудить сотрудничество,
               оставляйте заявку
             </p>
           </div>
         </div>
       </div>
       <div className='flex w-full'>
-        <div className='w-full lg:w-3/5 px-8 lg:px-28 py-16 bg-brand-100 flex flex-col gap-6 text-white'>
+        <div className='w-full lg:w-3/5 px-8 lg:px-28 py-12 bg-brand-100 flex flex-col gap-6 text-white'>
           <h1 className='text-2xl font-semibold'>НАШИ УСЛУГИ
             <span className='font-normal ml-2'>
               &#9679; ПАССАЖИРСКИЙ ЧАРТЕР
             </span>
           </h1>
           <p>
-            Доверьтесь нам в организации чартерных рейсов для вашего бизнеса<br/>
-            или личных потребностей! От перевозок персонала до спортивных и<br/>
-            гастрольных чартеров, мы предлагаем множество услуг. Независимо от<br/>
+            Доверьтесь нам в организации чартерных рейсов для вашего бизнеса
+            или личных потребностей! От перевозок персонала до спортивных и
+            гастрольных чартеров, мы предлагаем множество услуг. Независимо от
             цели поездки, поможем выбрать идеальный вариант.
           </p>
           <div className='flex flex-col gap-3'>
@@ -94,7 +94,7 @@ const Services: FC = () => {
 
           <div className="w-full border border-white" />
           <p className='italic'>
-            Услуга компании подходит для деловых поездок, отдыха и организации<br/>
+            Услуга компании подходит для деловых поездок, отдыха и организации
             спортивных и гастрольных туров.
           </p>
           <div className='flex items-center gap-6'>
@@ -102,25 +102,25 @@ const Services: FC = () => {
               Оставить заявку
             </button>
             <p className='text-xs'>
-              Если хотите обсудить сотрудничество,<br/>
+              Если хотите обсудить сотрудничество,
               оставляйте заявку
             </p>
           </div>
         </div>
-        <div className="w-0 lg:w-2/5 bg-[url('pages/about/cards-bg.png')] bg-cover bg-center bg-no-repeat"/>
+        <div className="w-0 lg:w-2/5 bg-[url('/pages/about/cards-bg.png')] bg-cover bg-center bg-no-repeat"/>
       </div>
       <div className='flex w-full'>
-        <div className="w-0 lg:w-2/5 bg-[url('pages/about/cards-bg.png')] bg-cover bg-bottom bg-no-repeat"/>
-        <div className='w-full lg:w-3/5 px-8 lg:px-28 py-16 bg-brand-100 flex flex-col gap-6 text-white'>
+        <div className="w-0 lg:w-2/5 bg-[url('/pages/about/cards-bg.png')] bg-cover bg-bottom bg-no-repeat"/>
+        <div className='w-full lg:w-3/5 px-8 lg:px-28 py-12 bg-brand-100 flex flex-col gap-6 text-white'>
           <h1 className='text-2xl font-semibold'>НАШИ УСЛУГИ
             <span className='font-normal ml-2'>
               &#9679; ПАССАЖИРСКИЙ ЧАРТЕР
             </span>
           </h1>
           <p>
-            Доверьтесь нам в организации чартерных рейсов для вашего бизнеса<br/>
-            или личных потребностей! От перевозок персонала до спортивных и<br/>
-            гастрольных чартеров, мы предлагаем множество услуг. Независимо от<br/>
+            Доверьтесь нам в организации чартерных рейсов для вашего бизнеса
+            или личных потребностей! От перевозок персонала до спортивных и
+            гастрольных чартеров, мы предлагаем множество услуг. Независимо от
             цели поездки, поможем выбрать идеальный вариант.
           </p>
           <div className='flex flex-col gap-3'>
@@ -148,7 +148,7 @@ const Services: FC = () => {
 
           <div className="w-full border border-white" />
           <p className='italic'>
-            Услуга компании подходит для деловых поездок, отдыха и организации<br/>
+            Услуга компании подходит для деловых поездок, отдыха и организации
             спортивных и гастрольных туров.
           </p>
           <div className='flex items-center gap-6'>
@@ -156,7 +156,7 @@ const Services: FC = () => {
               Оставить заявку
             </button>
             <p className='text-xs'>
-              Если хотите обсудить сотрудничество,<br/>
+              Если хотите обсудить сотрудничество,
               оставляйте заявку
             </p>
           </div>

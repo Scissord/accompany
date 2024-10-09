@@ -20,48 +20,46 @@ const Menu: FC = () => {
   return (
     <div className="container mx-8 bg-brand-300 rounded pt-4 pb-8 px-6 hidden lg:block z-10 absolute bottom-[-90px] left-1/2 transform -translate-x-1/2">
       <MenuTop />
-      <div className="flex items-center justify-center gap-3 mt-4">
-        <div className="flex justify-center gap-3">
-          <div className="flex items-center gap-3">
-            <Wrapper title={"Откуда"} bottom={"Алматы, Казахстан"}>
-              <div className="input-wrapper">
-                <input
-                  type="text"
-                  className="first-input"
-                  value={from}
-                  onChange={(e) => {
-                    localStorage.setItem('from', e.target.value);
-                    setFrom(e.target.value)
-                  }}
-                />
-                <div className="right-border-right-top"></div>
-                <div className="right-border-right-bottom"></div>
-              </div>
-              <img
-                className="w-4 absolute right-[-14px] top-11 z-20"
-                src="icons/left-right-arrows.svg"
-                alt="arrows.svg"
+      <div className="flex items-center justify-between gap-6 mt-4">
+        <div className="flex items-start justify-between gap-3 w-full">
+          <Wrapper title={"Откуда"} bottom={"Алматы, Казахстан"} className="w-1/4">
+            <div className="input-wrapper">
+              <input
+                type="text"
+                className="first-input"
+                value={from}
+                onChange={(e) => {
+                  localStorage.setItem('from', e.target.value);
+                  setFrom(e.target.value)
+                }}
               />
-            </Wrapper>
+              <div className="right-border-right-top"></div>
+              <div className="right-border-right-bottom"></div>
+            </div>
+            <img
+              className="w-4 absolute right-[-14px] top-11 z-20"
+              src="icons/left-right-arrows.svg"
+              alt="arrows.svg"
+            />
+          </Wrapper>
 
-            <Wrapper title={"Куда"} bottom={"Москва, Россия"}>
-              <div className="input-wrapper">
-                <input
-                  type="text"
-                  className="second-input"
-                  value={to}
-                  onChange={(e) => {
-                    localStorage.setItem('to', e.target.value);
-                    setTo(e.target.value)
-                  }}
-                />
-                <div className="right-border-left-top"></div>
-                <div className="right-border-left-bottom"></div>
-              </div>
-            </Wrapper>
-          </div>
+          <Wrapper title={"Куда"} bottom={"Москва, Россия"} className="w-1/4">
+            <div className="input-wrapper">
+              <input
+                type="text"
+                className="second-input"
+                value={to}
+                onChange={(e) => {
+                  localStorage.setItem('to', e.target.value);
+                  setTo(e.target.value)
+                }}
+              />
+              <div className="right-border-left-top"></div>
+              <div className="right-border-left-bottom"></div>
+            </div>
+          </Wrapper>
 
-          <Wrapper title={"Дата вылета"}>
+          <Wrapper title={"Дата вылета"} className="w-1/4">
             <DatePicker
               selected={date}
               onChange={(date) => {
@@ -70,16 +68,16 @@ const Menu: FC = () => {
                   setDate(date)
                 }
               }}
-              className='h-14 p-2 bg-brand-300 border border-white w-[200px]'
+              className='h-14 p-2 bg-brand-300 border border-white w-full'
             />
             <img
-              className="w-4 absolute bottom-11 right-3"
+              className="w-4 absolute bottom-6 right-3"
               src="icons/calendar.svg"
               alt="calendar.svg"
             />
           </Wrapper>
 
-          <Wrapper title={"Пассажиры"}>
+          <Wrapper title={"Пассажиры"} className="w-1/4">
             <Select
               value={passengers}
               onChange={(val) => {
@@ -117,7 +115,7 @@ const Select: FC<SelectProps>  = ({ value, onChange, options }) => {
   };
 
   return (
-    <div className="relative w-[200px]">
+    <div className="relative w-full">
       <div
         className="h-14 p-2 bg-brand-300 border border-white cursor-pointer flex items-center justify-start"
         onClick={() => setIsOpen(!isOpen)}

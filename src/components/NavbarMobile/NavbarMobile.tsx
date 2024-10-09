@@ -16,11 +16,11 @@ export const NavbarMobile: FC = () => {
 
   return (
     <>
-      <div className="container mx-auto fijb lg:hidden px-6">
+      <div className="container mx-auto h-full fijb lg:hidden px-6">
         <img
           src="logo.png"
           onClick={() => navigate('/accompany/')}
-          className="w-[24%]"
+          className="w-[24%] sm:w-[20%]"
           alt="logo"
         />
         <div className="cursor-pointer" onClick={handleMenuClick}>

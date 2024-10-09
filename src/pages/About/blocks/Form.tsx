@@ -15,26 +15,26 @@ const Form: FC = () => {
               <input
                 type="text"
                 placeholder="Компания"
-                className="border border-white p-4 bg-brand-300 w-full"
+                className="border border-white p-4 w-full"
               />
               <input
                 type="email"
                 placeholder="E-mail"
-                className="border border-white p-4 bg-brand-300 w-full"
+                className="border border-white p-4 w-full"
               />
               <textarea
                 placeholder="Ваше обращение"
-                className="border border-white p-4 bg-brand-300 h-full w-full"
+                className="border border-white p-4 h-full w-full"
               />
             </div>
             <div className="hidden md:block h-full w-3/5 bg-white ml-12"/>
           </div>
-          <div className="flex items-center justify-between">
+          <div className="flex flex-col md:flex-row items-center gap-3 md:gap-0 justify-between">
             <div className="flex items-center gap-2 w-full md:w-2/5">
               <button className="w-1/2 bg-white text-brand-100 p-3">Отправить</button>
-              <p className="w-1/2 text-[13px] whitespace-nowrap">Персональная обработка данных</p>
+              <p className="w-1/2 text-[13px] lg:whitespace-nowrap">Персональная обработка данных</p>
             </div>
-            <div className="md:w-3/5 ml-12">
+            <div className="w-full md:w-3/5 md:ml-12">
               <button onClick={() => context?.modal.set(true)} className="bg-white text-brand-100 p-3">
                 Заполнить продвинутую форму
               </button>

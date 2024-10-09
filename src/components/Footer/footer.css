@@ -1,0 +1,14 @@
+.footer {
+  inset: 0px;
+  position: absolute;
+}
+
+@media (min-width: 1024px) {
+  .footer {
+    background-image: url("/pages/main/planes.svg");
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: 32%;
+    rotate: 180deg;
+  }
+}

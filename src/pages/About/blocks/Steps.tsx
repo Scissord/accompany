@@ -10,13 +10,13 @@ const Steps: FC = () => {
     <section className="relative bg-white">
       <div className='container mx-auto flex flex-col items-center py-12 px-8 lg:px-0'>
         <p className="text-3xl text-brand-300 mb-6">Этапы организации аренды</p>
-        <p className='text-gray-600'>
+        <p className='text-brand-100 text-center'>
           Чтобы узнать стоимость аренды коммерческого самолета, свяжитесь с нашим
-          менеджером. Стоимость зависит от <br/>
+          менеджером. Стоимость зависит от
           продолжительности рейса, сложности маршрута, типа самолета и года выпуска,
           а также от аэропортных сборов.
         </p>
-        <div className='flex items-center lg:items-start justify-center flex-col lg:flex-row gap-24 mt-12'>
+        <div className='flex items-center lg:items-start justify-between flex-col lg:flex-row mt-12 w-full'>
           <div className={css.wrapper}>
             <img src="icons/portrait-user.svg" className='h-28'/>
             <p className={css.text}>Подача заявки<br/> на рейс</p>

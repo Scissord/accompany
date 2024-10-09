@@ -1,17 +1,15 @@
 .form {
-  height: 75vh;
+  height: 80vh;
   position: relative;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
   color: white;
 }
 
 @media (min-width: 1024px) {
   .form {
-    background-image: url("pages/charters/form_bg.png");
+    background-image: url("/pages/charters/form_bg.png");
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 100%;
+    background-size: cover;
     object-fit: cover;
   }
 }

@@ -1,21 +1,13 @@
 import { FC } from "react";
+import './footer.css';
 
 export const Footer: FC = () => {
   return (
     <footer className="h-[55vh] lg:h-[40vh] bg-brand-100 py-12 lg:py-20 relative">
-      <div
-        className="absolute inset-0"
-        style={{
-          backgroundImage: "url('pages/main/planes.svg')",
-          backgroundPosition: "left",
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "32%",
-          transform: "rotate(180deg)",
-        }}
-      />
+      <div className="footer" />
       <div className="container mx-auto h-full px-6 lg:px-0">
         <div className="h-[30%] lg:h-[70%] w-full flex flex-col lg:flex-row justify-between">
-          <img src="logo.png" className="w-[40%] lg:w-[10%] h-12" alt="logo" />
+          <img src="logo.png" className="w-[35%] sm:w-[20%] lg:w-[10%] h-12" alt="logo" />
           <div className="w-[20%] flex items-start justify-between gap-10 text-black dark:text-white ">
             <div className="flex flex-col gap-3">
               <p>?????</p>
