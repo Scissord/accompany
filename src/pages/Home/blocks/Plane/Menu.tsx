@@ -5,6 +5,7 @@ import Wrapper from "./Wrapper";
 import "react-datepicker/dist/react-datepicker.css";
 import "./input.css";
 import "./select.css";
+import { useViewContext } from "@context";
 
 const options = [
   { value: "1", label: "1 пассажир" },
@@ -12,13 +13,19 @@ const options = [
 ];
 
 const Menu: FC = () => {
-  const [from, setFrom] = useState<string>("");
-  const [to, setTo] = useState<string>("");
-  const [date, setDate] = useState<Date | null>(new Date());
-  const [passengers, setPassengers] = useState<string>('1 пассажир');
+  const context = useViewContext();
+
+  const [userInfo, setUserInfo] = useState({
+    from: localStorage.getItem("from") || "",
+    to: localStorage.getItem("to") || "",
+    startDate: localStorage.getItem("startDate")
+      ? new Date(localStorage.getItem("startDate") as string)
+      : new Date(),
+    passengers: localStorage.getItem("passengers") || '1 пассажир'
+  })
 
   return (
-    <div className="container mx-8 bg-brand-300 rounded pt-4 pb-8 px-6 hidden lg:block z-10 absolute bottom-[-90px] left-1/2 transform -translate-x-1/2">
+    <div className="container mx-8 bg-white dark:bg-brand-300 rounded pt-4 pb-8 px-6 hidden lg:block z-20 absolute bottom-[-90px] left-1/2 transform -translate-x-1/2">
       <MenuTop />
       <div className="flex items-center justify-between gap-6 mt-4">
         <div className="flex items-start justify-between gap-3 w-full">
@@ -26,63 +33,85 @@ const Menu: FC = () => {
             <div className="input-wrapper">
               <input
                 type="text"
-                className="first-input"
-                value={from}
+                className="first-input text-dbg dark:text-white border border-dbg dark:border-white"
+                value={userInfo.from}
                 onChange={(e) => {
                   localStorage.setItem('from', e.target.value);
-                  setFrom(e.target.value)
+                  setUserInfo({ ...userInfo, from: e.target.value })
                 }}
               />
-              <div className="right-border-right-top"></div>
-              <div className="right-border-right-bottom"></div>
+              <div className="right-border-right-top bg-dbg dark:bg-white"></div>
+              <div className="right-border-right-bottom bg-dbg dark:bg-white"></div>
             </div>
-            <img
-              className="w-4 absolute right-[-14px] top-11 z-20"
-              src="icons/left-right-arrows.svg"
-              alt="arrows.svg"
-            />
+            {context?.theme.get === 'dark' ? (
+              <img
+                className="w-4 absolute right-[-14px] top-11 z-20"
+                src="icons/left-right-arrows-white.svg"
+                alt="arrows.svg"
+              />
+            ) : (
+              <img
+                className="w-4 absolute right-[-14px] top-11 z-20"
+                src="icons/left-right-arrows-dark.svg"
+                alt="arrows.svg"
+              />
+            )}
+
           </Wrapper>
 
           <Wrapper title={"Куда"} bottom={"Москва, Россия"} className="w-1/4">
             <div className="input-wrapper">
               <input
                 type="text"
-                className="second-input"
-                value={to}
+                className="second-input text-dbg dark:text-white border border-dbg dark:border-white"
+                value={userInfo.to}
                 onChange={(e) => {
                   localStorage.setItem('to', e.target.value);
-                  setTo(e.target.value)
+                  setUserInfo({ ...userInfo, to: e.target.value })
                 }}
               />
-              <div className="right-border-left-top"></div>
-              <div className="right-border-left-bottom"></div>
+              <div className="right-border-left-top bg-dbg dark:bg-white"></div>
+              <div className="right-border-left-bottom bg-dbg dark:bg-white"></div>
             </div>
           </Wrapper>
 
           <Wrapper title={"Дата вылета"} className="w-1/4">
             <DatePicker
-              selected={date}
+              selected={userInfo.startDate}
               onChange={(date) => {
                 if(date) {
-                  localStorage.setItem('date', date.toISOString());
-                  setDate(date)
+                  localStorage.setItem('startDate', date.toISOString());
+                  setUserInfo({ ...userInfo, startDate: date })
                 }
               }}
-              className='h-14 p-2 bg-brand-300 border border-white w-full'
+              className='h-14 p-2 text-dbg dark:text-white border border-dbg dark:border-white w-full'
+              dateFormat="dd.MM.yyyy h:mm aa"
+              popperClassName="z-20"
+              timeInputLabel="Time:"
+              showTimeInput
             />
-            <img
-              className="w-4 absolute bottom-6 right-3"
-              src="icons/calendar.svg"
-              alt="calendar.svg"
-            />
+            {context?.theme.get === 'dark' ? (
+              <img
+                className="w-4 absolute bottom-6 right-3"
+                src="icons/calendar-white.svg"
+                alt="calendar.svg"
+              />
+            ) : (
+              <img
+                className="w-4 absolute bottom-6 right-3"
+                src="icons/calendar-dark.svg"
+                alt="calendar.svg"
+              />
+            )}
+
           </Wrapper>
 
           <Wrapper title={"Пассажиры"} className="w-1/4">
             <Select
-              value={passengers}
+              value={userInfo.passengers}
               onChange={(val) => {
                 localStorage.setItem('passengers', val);
-                setPassengers(val)
+                setUserInfo({ ...userInfo, passengers: val });
               }}
               options={options}
             />
@@ -117,7 +146,7 @@ const Select: FC<SelectProps>  = ({ value, onChange, options }) => {
   return (
     <div className="relative w-full">
       <div
-        className="h-14 p-2 bg-brand-300 border border-white cursor-pointer flex items-center justify-start"
+        className="h-14 p-2 text-dbg dark:text-white border border-dbg dark:border-white cursor-pointer flex items-center justify-start"
         onClick={() => setIsOpen(!isOpen)}
       >
         {value ? value : ''}

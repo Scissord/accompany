@@ -12,9 +12,9 @@ const Wrapper: FC<Props> = (props) => {
 
   return (
     <div className={`flex flex-col gap-1 relative ${className}`}>
-      <p className="text-sm">{title}</p>
+      <p className="text-sm text-gbg dark:text-white">{title}</p>
       {children}
-      <p className="text-sm">{bottom}</p>
+      <p className="text-sm text-gbg dark:text-white">{bottom}</p>
     </div>
   );
 };
