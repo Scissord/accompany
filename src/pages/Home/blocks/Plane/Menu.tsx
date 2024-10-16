@@ -183,4 +183,4 @@ function IconChevronDown(props: React.SVGProps<SVGSVGElement>) {
       />
     </svg>
   );
-}
+};
