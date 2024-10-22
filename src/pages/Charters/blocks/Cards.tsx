@@ -213,12 +213,13 @@ const Cards: FC = () => {
       <div className="container mx-auto grid grid-cols-1 lg:grid-cols-3 gap-6 py-12 px-6 lg:px-0">
         {cards.map((card) => (
           <div
-          className={`flex flex-col p-6 lg:p-12 bg-brand-200 text-white transform transition-transform duration-300 ease-in-out hover:scale-105`}
-          style={{
-            backgroundImage: `url(${card.path})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'top',
-          }}
+            key={card.title}
+            className={`flex flex-col p-6 lg:p-12 bg-brand-200 text-white transform transition-transform duration-300 ease-in-out hover:scale-105`}
+            style={{
+              backgroundImage: `url(${card.path})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'top',
+            }}
           >
             <p className='text-2xl'>{card.title}</p>
             <div className='mt-48 text-sm'>

@@ -16,7 +16,7 @@ export const Modal: FC = () => {
     endDate: localStorage.getItem("endDate")
       ? new Date(localStorage.getItem("endDate") as string)
       : new Date(),
-    passengers: localStorage.getItem("passengers") || '1 пассажир',
+    passengers: localStorage.getItem("passengers") || "",
     customer: localStorage.getItem("customer") || "",
     isTeam: localStorage.getItem('isTeam') === 'true',
     face: localStorage.getItem("face") || "",

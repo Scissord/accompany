@@ -6,7 +6,7 @@
 
 @media (min-width: 1024px) {
   .consult {
-    min-height: 550px;
+    min-height: 500px;
     background-image: url("/pages/main/consult-bg.png");
     background-repeat: no-repeat;
     background-position: center;
@@ -14,5 +14,11 @@
     display: flex;
     align-items: center;
     justify-content: flex-center;
+  }
+}
+
+@media (min-width: 2560px) {
+  .consult {
+    min-height: 700px;
   }
 }

@@ -1,10 +1,12 @@
 import { FC, useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import './Consult/consult.css';
+import { useTranslation } from "react-i18next";
 
 const Consult: FC = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: false });
+  const { t } = useTranslation();
 
   const textVariants = {
     hidden: { opacity: 0, x: -100 },
@@ -34,29 +36,29 @@ const Consult: FC = () => {
           animate={isInView ? "visible" : "hidden"}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          Чартерные рейсы - это идеальное решение для тех, кто<br />
-          ценит свободу выбора, комфорт и гибкость в путешествиях.
+          {t('home_consult_description_1')}<br />
+          {t('home_consult_description_2')}
         </motion.p>
         <motion.p
           className="mt-4 z-10 text-xl"
           variants={textVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
-          transition={{ duration: 0.8, delay: 0.6 }} // Задержка для второго параграфа
+          transition={{ duration: 0.8, delay: 0.6 }}
         >
-          С нами вы сможете планировать перелеты по своему<br />
-          расписанию, избегая ограничений регулярных рейсов.
+          {t('home_consult_description_3')}<br />
+          {t('home_consult_description_4')}
         </motion.p>
         <motion.p
           className="mt-4 z-10 text-xl"
           variants={textVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
-          transition={{ duration: 0.8, delay: 0.8 }} // Задержка для третьего параграфа
+          transition={{ duration: 0.8, delay: 0.8 }}
         >
-          Мы предлагаем чартерные перелеты на частных и<br />
-          бизнес-джетах по всему миру, обеспечивая высокий<br />
-          уровень сервиса и конфиденциальности.
+          {t('home_consult_description_5')}<br />
+          {t('home_consult_description_6')}<br />
+          {t('home_consult_description_7')}
         </motion.p>
       </div>
     </section>
