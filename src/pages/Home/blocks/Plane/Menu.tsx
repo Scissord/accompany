@@ -25,7 +25,7 @@ const Menu: FC = () => {
   })
 
   return (
-    <div className="container mx-8 bg-white dark:bg-brand-300 rounded pt-4 pb-8 px-6 hidden lg:block z-20 absolute bottom-[-90px] left-1/2 transform -translate-x-1/2">
+    <div className="container bg-white dark:bg-brand-300 rounded pt-4 pb-8 px-6 hidden lg:block z-20 absolute bottom-[-90px] left-1/2 transform -translate-x-1/2">
       <MenuTop />
       <div className="flex items-center justify-between gap-6 mt-4">
         <div className="flex items-start justify-between gap-3 w-full">

@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { View } from '@context';
 import NotFound from '@pages/404';
 import routes from '@routes';
+import '../i18n';
 
 function App() {
   return (

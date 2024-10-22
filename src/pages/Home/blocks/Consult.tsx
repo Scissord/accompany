@@ -16,7 +16,7 @@ const Consult: FC = () => {
       <div className="absolute inset-0 bg-gradient-to-r w-0 lg:w-5/6 from-brand-300 via-brand-100 to-transparent" />
       <div
         ref={ref}
-        className="container mx-auto px-8 h-full flex flex-col items-start justify-center py-12 lg:py-0"
+        className="container mx-auto px-8 lg:px-0 h-full flex flex-col items-start justify-center py-12 lg:py-0"
       >
         <motion.h1
           className="text-4xl sm:text-4xl font-bold z-10"

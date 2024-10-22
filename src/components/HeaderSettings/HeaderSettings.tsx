@@ -9,16 +9,12 @@ const options = [
 
 export const HeaderSettings: FC = () => {
   const context = useViewContext();
-  const [language, setLanguage] = useState<string>('RU');
 
   return (
-    <div className="fi gap-6 z-30">
+    <div className="flex items-center justify-center gap-6 z-30 h-full w-[15%]">
       <Select
-        value={language}
-        onChange={(val) => {
-          localStorage.setItem('language', val);
-          setLanguage(val);
-        }}
+        value={context?.language.get}
+        onChange={(val) => context?.language.set(val)}
         options={options}
       />
       {context?.theme.get === 'dark' ? (
@@ -41,7 +37,7 @@ export const HeaderSettings: FC = () => {
 };
 
 type SelectProps = {
-  value: string;
+  value: string | undefined;
   onChange: (val: string) => void;
   options: any;
 };
@@ -55,7 +51,7 @@ const Select: FC<SelectProps>  = ({ value, onChange, options }) => {
   };
 
   return (
-    <div className="relative w-full">
+    <div className="relative ml-auto">
       <div
         className="h-14 p-2 text-white cursor-pointer flex items-center justify-start"
         onClick={() => setIsOpen(!isOpen)}

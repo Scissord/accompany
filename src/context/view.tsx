@@ -1,5 +1,6 @@
 import { createContext, Dispatch, FC, ReactNode, SetStateAction, useContext, useState } from "react";
 import { Modal } from "@components";
+import { useTranslation } from 'react-i18next';
 
 interface ViewProps {
   title: string;
@@ -7,6 +8,10 @@ interface ViewProps {
 };
 
 interface ViewContextType {
+  language: {
+    get: string;
+    set: (lng: string) => void;
+  };
   theme: {
     get: string;
     set: Dispatch<SetStateAction<string>>;
@@ -26,7 +31,17 @@ export const View: FC<ViewProps> = ({ title, display }) => {
   const [modal, setModal] = useState(false);
   const [theme, setTheme] = useState('dark');
 
+  const { i18n } = useTranslation();
+
+  const changeLanguage = (lng: string) => {
+    i18n.changeLanguage(lng);
+  };
+
   const data = {
+    language: {
+      get: i18n.language,
+      set: changeLanguage,
+    },
     theme: {
       get: theme,
       set: setTheme,
@@ -41,7 +56,7 @@ export const View: FC<ViewProps> = ({ title, display }) => {
   if (!display) return null
 
   return (
-    <ViewContext.Provider value={{ ...data }}>
+    <ViewContext.Provider value={data}>
       {modal && <Modal/>}
       <div className={`min-h-[100vh] ${theme === 'dark' ? 'dark' : ''}`}>
         {display}

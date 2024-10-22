@@ -4,7 +4,45 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Partners */
+/* HIDE NUMBER INPUT ARROWS */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/* HIDE CALENDAR DATE INPUT */
+/* Убираем иконку календаря в Chrome, Safari, Edge, Opera */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+/* Убираем иконку календаря в Firefox */
+input[type="date"] {
+  -moz-appearance: textfield;
+  appearance: none;
+}
+
+/* Убираем иконку в Internet Explorer */
+input[type="date"]::-ms-clear {
+  display: none;
+}
+
+/* Убираем стрелочку в select */
+select {
+  -webkit-appearance: none; /* Для браузеров на основе WebKit (Chrome, Safari) */
+  -moz-appearance: none; /* Для Firefox */
+  appearance: none; /* Для современных браузеров */
+  background: none; /* Опционально, чтобы убрать фон */
+}
+
+/* Partners Banner */
 @keyframes scroll {
   0% {
     transform: translateX(0);
@@ -122,42 +160,3 @@ label {
 legend {
   display: block;
 }
-
-/* HIDE NUMBER INPUT ARROWS */
-/* Chrome, Safari, Edge, Opera */
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-/* Firefox */
-input[type=number] {
-  -moz-appearance: textfield;
-}
-
-/* HIDE CALENDAR DATE INPUT */
-/* Убираем иконку календаря в Chrome, Safari, Edge, Opera */
-input[type="date"]::-webkit-calendar-picker-indicator {
-  display: none;
-}
-
-/* Убираем иконку календаря в Firefox */
-input[type="date"] {
-  -moz-appearance: textfield;
-  appearance: none;
-}
-
-/* Убираем иконку в Internet Explorer */
-input[type="date"]::-ms-clear {
-  display: none;
-}
-
-/* Убираем стрелочку в select */
-select {
-  -webkit-appearance: none; /* Для браузеров на основе WebKit (Chrome, Safari) */
-  -moz-appearance: none; /* Для Firefox */
-  appearance: none; /* Для современных браузеров */
-  background: none; /* Опционально, чтобы убрать фон */
-}
-

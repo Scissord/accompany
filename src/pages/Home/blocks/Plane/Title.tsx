@@ -1,9 +1,12 @@
 import { FC, useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 const Title: FC = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: false });
+
+  const { t } = useTranslation();
 
   const textVariants = {
     hidden: { opacity: 0, x: -100 },
@@ -13,7 +16,7 @@ const Title: FC = () => {
   return (
     <motion.div
       ref={ref}
-      className="container mx-auto px-8 h-full py-12 lg:py-0"
+      className="container mx-auto px-8 lg:px-0 h-full py-12 lg:py-0"
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
       transition={{ duration: 0.8, ease: "easeInOut" }}
@@ -23,19 +26,22 @@ const Title: FC = () => {
         variants={textVariants}
         transition={{ duration: 0.8, delay: 0.2 }}
       >
-        Ваш чартер.
-        <br /> Ваши границы
+        {/*  */}
+        {t('home_title')}
+        <br />
+        {/*  */}
+        {t('home_subtitle')}
       </motion.h1>
       <motion.p
         className="mt-4 text-xl"
         variants={textVariants}
         transition={{ duration: 0.8, delay: 0.5 }}
       >
-        Мы предлагаем чартерные перелеты на частных
+        {t('home_description_first')}
         <br />
-        и бизнес-джетах по всему миру, обеспечивая
+        {t('home_description_second')}
         <br />
-        высокий уровень сервиса и конфиденциальности.
+        {t('home_description_third')}
       </motion.p>
     </motion.div>
   );

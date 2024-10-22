@@ -1,4 +1,5 @@
 import { FC, useEffect, useRef, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 
 const css = {
@@ -8,6 +9,7 @@ const css = {
 
 export const Navbar: FC = () => {
   const navigate = useNavigate();
+  const { t } = useTranslation();
   const [hoverAbout, setHoverAbout] = useState(false);
 
   const dropdownRef = useRef<HTMLDivElement>(null);
@@ -34,51 +36,51 @@ export const Navbar: FC = () => {
   }, [hoverAbout]);
 
   return (
-    <nav className="relative flex items-center gap-12 z-30">
+    <nav className="relative flex items-center justify-center gap-12 z-30 h-full w-[70%]">
       <p
         className={css.link}
         onClick={() => navigate("/accompany/about")}
         onMouseEnter={() => setHoverAbout(true)}
       >
-        О компании
+        {t('header_about')}
       </p>
       {hoverAbout && (
         <div
           ref={dropdownRef}
-          className="absolute top-6 left-0 bg-white flex flex-col text-black rounded"
+          className="absolute top-12 left-6 bg-white flex flex-col text-black rounded"
           onMouseLeave={() => setHoverAbout(false)}
         >
           <p
             className={css.dropMenuLink}
             onClick={() => navigate("/accompany/charters")}
           >
-            Гид по самолетам
+            {t('header_about_guide')}
           </p>
           <p
             className={css.dropMenuLink}
             onClick={() => navigate("/accompany/charters")}
           >
-            Новости
+            {t('header_about_news')}
           </p>
           <p
             className={css.dropMenuLink}
             onClick={() => navigate("/accompany/charters")}
           >
-            Безопасность
+            {t('header_about_safety')}
           </p>
         </div>
       )}
       <p className={css.link} onClick={() => navigate("/accompany/charters")}>
-        Пассажирский чартер
+        {t('header_passenger')}
       </p>
       <p className={css.link} onClick={() => navigate("/accompany/charters")}>
-        Грузовой чартер
+        {t('header_cargo')}
       </p>
       <p className={css.link} onClick={() => navigate("/accompany/charters")}>
-        VIP-чартер
+        {t('header_vip')}
       </p>
       <p className={css.link} onClick={() => navigate("/accompany/contacts")}>
-        Контакты
+        {t('header_contacts')}
       </p>
     </nav>
   );
