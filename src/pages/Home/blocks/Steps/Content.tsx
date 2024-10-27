@@ -9,7 +9,6 @@ const Content: FC<Props> = ({ steps }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: false });
 
-  // Анимации для заголовков и описаний
   const titleVariants = {
     hidden: { opacity: 0, x: -100 },
     visible: { opacity: 1, x: 0 }
@@ -29,7 +28,7 @@ const Content: FC<Props> = ({ steps }) => {
           className="relative"
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
-          transition={{ duration: 0.8, delay: index * 0.3 }} // Задержка для каждого шага
+          transition={{ duration: 0.8, delay: index * 0.3 }}
         >
           <div className="w-full fijc">
             <div className="text-3xl text-center fijc w-12 h-12 bg-white text-brand-100 font-bold rounded-full border-4 border-brand-100">

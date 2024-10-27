@@ -10,7 +10,7 @@ const Mobile: FC<Props> = ({ steps }) => {
     <div className="container mx-auto fijc gap-6 flex-col lg:hidden px-6">
       {steps.map((step, index) => {
         const ref = useRef(null);
-        const isInView = useInView(ref, { once: false }); // Анимация срабатывает один раз при появлении
+        const isInView = useInView(ref, { once: false });
 
         return (
           <motion.div
