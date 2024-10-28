@@ -1,7 +1,10 @@
 import { FC } from "react";
 import './footer.css';
+import { useTranslation } from "react-i18next";
 
 export const Footer: FC = () => {
+  const { t } = useTranslation();
+
   return (
     <footer className="h-[55vh] lg:h-[40vh] bg-brand-100 py-12 lg:py-20 relative">
       <div className="footer" />
@@ -26,9 +29,9 @@ export const Footer: FC = () => {
         </div>
         <div className="relative pt-12 lg:pt-0 h-[70%] lg:h-[30%] flex flex-col lg:flex-row items-start lg:items-center gap-3 lg:gap-10 text-white">
           <p>{"TOO «Avia Consulting Company»"}</p>
-          <p>Политика обработки персональных данных</p>
+          <p>{t('home_footer_politic')}</p>
           <button className="border border-slate-400 text-white py-2 px-4 rounded-full">
-            Заказать обратный звонок
+            {t('home_footer_call_back')}
           </button>
           <p className=" whitespace-nowrap">Design by Quasar</p>
         </div>

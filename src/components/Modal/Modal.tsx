@@ -33,7 +33,7 @@ export const Modal: FC = () => {
 
   return (
     <div className="fixed top-0 right-0 bottom-0 left-0 z-40 bg-black bg-opacity-50 flex items-center justify-center">
-      <div className="relative bg-white w-[70%] h-[80%] rounded-lg shadow-lg p-6 overflow-y-auto z-50">
+      <div className="relative bg-white w-[70%] h-[80%] rounded-lg shadow-lg p-6 overflow-hidden z-50">
         <button
           onClick={() => context?.modal.set(false)}
           className="absolute top-4 right-4 text-gray-500 hover:text-gray-800"
@@ -42,7 +42,7 @@ export const Modal: FC = () => {
         </button>
         <h1 className="text-2xl font-semibold">Заявка</h1>
         <p>*Обязательные поля для заполнения</p>
-        <div className='grid grid-cols-3 gap-6 mt-6'>
+        <div className='grid grid-cols-3 gap-6 mt-6 h-full overflow-y-auto'>
           <p className='text-xl font-bold'>Информация о перелете*</p>
           <div className='col-span-2 flex flex-col gap-6 w-full'>
             <div className='flex items-center justify-between gap-4'>

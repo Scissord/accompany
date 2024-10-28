@@ -30,16 +30,18 @@ export const ViewContext = createContext<ViewContextType | null>(null);
 export const View: FC<ViewProps> = ({ title, display }) => {
   const [modal, setModal] = useState(false);
   const [theme, setTheme] = useState('dark');
+  const [language, setLanguage] = useState('RU');
 
   const { i18n } = useTranslation();
 
   const changeLanguage = (lng: string) => {
     i18n.changeLanguage(lng);
+    setLanguage(lng);
   };
 
   const data = {
     language: {
-      get: i18n.language,
+      get: language,
       set: changeLanguage,
     },
     theme: {

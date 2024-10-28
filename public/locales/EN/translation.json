@@ -58,5 +58,17 @@
   "home_steps_second_description": "We offer services for various types of aircraft – from small private jets to large VIP airliners, tailored to your needs and budget. You can choose the aircraft that best suits your needs and preferences – from spacious cabins for meetings to entertainment systems and comfortable seating.",
   "home_steps_third_title_part_1": "Save your time with",
   "home_steps_third_title_part_2": "charter flights",
-  "home_steps_third_description": "Our team of specialists works with you to create a personalized flight plan, including all additional services you may need – from catering to personal hostesses. We aim to ensure a high level of service and maximum comfort, so you can fully relax and enjoy the journey."
+  "home_steps_third_description": "Our team of specialists works with you to create a personalized flight plan, including all additional services you may need – from catering to personal hostesses. We aim to ensure a high level of service and maximum comfort, so you can fully relax and enjoy the journey.",
+  "home_partners_title": "Our partners",
+  "home_form_title": "Submit a request",
+  "home_form_description": "Company name",
+  "home_form_first_input": "Company",
+  "home_form_second_input": "E-mail",
+  "home_form_textarea": "Your message",
+  "home_form_send_button": "Send",
+  "home_form_politic": "Personal data processing",
+  "home_form_open_button": "Fill out the advanced form",
+  "home_events_title": "Events",
+  "home_footer_politic": "Personal data processing policy",
+  "home_footer_call_back": "Request a callback"
 }

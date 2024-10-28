@@ -8,6 +8,24 @@ import "./select.css";
 import { useViewContext } from "@context";
 import { useTranslation } from "react-i18next";
 
+const css = {
+  container: `
+    container bg-white dark:bg-brand-300
+    rounded pt-4 pb-8 px-6 hidden lg:block
+    z-20 absolute bottom-[-80px] left-1/2
+    -translate-x-1/2
+  `,
+  button: `
+    h-14 text-sm bg-brand-100 whitespace-nowrap
+    px-6 flex items-center justify-center
+    font-semibold dark:hover:bg-white
+    hover:bg-black hover:bg-opacity-50
+    transition-transform duration-200 ease-in-out
+    transform active:scale-95 hover:dark:text-dbg
+    hover:text-white
+  `
+}
+
 const Menu: FC = () => {
   const { t } = useTranslation();
   const context = useViewContext();
@@ -22,7 +40,7 @@ const Menu: FC = () => {
   })
 
   return (
-    <div className="container bg-white dark:bg-brand-300 rounded pt-4 pb-8 px-6 hidden lg:block z-20 absolute bottom-[-80px] left-1/2 -translate-x-1/2">
+    <div className={css.container}>
       <MenuTop />
       <div className="flex items-end justify-between gap-6 mt-4">
         <div className="flex items-center justify-between gap-3 w-full">
@@ -129,7 +147,7 @@ const Menu: FC = () => {
           </Wrapper>
         </div>
 
-        <button className="h-14 text-sm bg-brand-100 whitespace-nowrap px-6 flex items-center justify-center font-semibold hover:bg-white hover:bg-opacity-50">
+        <button className={css.button}>
           {t('home_menu_submit_button')}
         </button>
       </div>

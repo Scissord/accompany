@@ -23,21 +23,21 @@ const config: Config = {
     function ({ addUtilities }) {
       const newUtilities = {
         '.fi': {
-          display: 'flex',
-          'align-items': 'center',
+          "display": 'flex',
+          "align-items": 'center',
         },
         '.fijb': {
-          display: 'flex',
+          'display': 'flex',
           'align-items': 'center',
           'justify-content': 'space-between',
         },
         '.fijc': {
-          display: 'flex',
+          'display': 'flex',
           'align-items': 'center',
           'justify-content': 'center',
         },
         '.fije': {
-          display: 'flex',
+          'display': 'flex',
           'align-items': 'center',
           'justify-content': 'end',
         },
