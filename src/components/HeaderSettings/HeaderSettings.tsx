@@ -5,7 +5,7 @@ import Select from './Select';
 const options = [
   { value: "1", label: "RU" },
   { value: "2", label: "KZ" },
-  { value: "2", label: "EN" },
+  { value: "3", label: "EN" },
 ];
 
 export const HeaderSettings: FC = () => {

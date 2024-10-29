@@ -1,7 +1,7 @@
 import { FC, useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import './Consult/consult.css';
 import { useTranslation } from "react-i18next";
+// import './Consult/consult.css';
 
 const Consult: FC = () => {
   const ref = useRef(null);
@@ -14,8 +14,15 @@ const Consult: FC = () => {
   };
 
   return (
-    <section className="consult">
-      <div className="absolute inset-0 bg-gradient-to-r w-0 lg:w-5/6 from-brand-300 via-brand-100 to-transparent" />
+    <section className={`
+      bg-gbg relative text-white
+       bg-[url('/pages/main/consult-bg.png')]
+       bg-no-repeat bg-center bg-cover
+       flex items-center justify-center
+       min-h-[30vh] lg:min-h-[70vh]
+    `}>
+      <div className="hidden lg:block absolute inset-0 bg-gradient-to-r w-5/6 from-brand-300 via-brand-100 to-transparent" />
+      <div className="lg:hidden absolute inset-0 bg-brand-200 bg-opacity-80" />
       <div
         ref={ref}
         className="container mx-auto px-8 lg:px-0 h-full flex flex-col items-start justify-center py-12 lg:py-0"

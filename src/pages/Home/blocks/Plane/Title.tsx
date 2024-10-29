@@ -16,7 +16,7 @@ const Title: FC = () => {
   return (
     <motion.div
       ref={ref}
-      className="container mx-auto px-8 lg:px-0 h-full py-12 lg:py-0"
+      className="container mx-auto px-8 lg:px-0 h-full py-12 lg:py-0 z-10"
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
       transition={{ duration: 0.8, ease: "easeInOut" }}

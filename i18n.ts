@@ -18,7 +18,7 @@ i18n
     },
     detection: {
       order: ['querystring', 'cookie', 'localStorage', 'navigator', 'htmlTag'],
-      caches: ['localStorage', 'cookie'], // Запоминаем выбранный язык в localStorage или cookie
+      caches: ['localStorage', 'cookie'],
     },
   });
 

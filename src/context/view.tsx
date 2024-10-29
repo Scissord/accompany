@@ -28,11 +28,13 @@ export const useViewContext = () => {
 export const ViewContext = createContext<ViewContextType | null>(null);
 
 export const View: FC<ViewProps> = ({ title, display }) => {
+  const { i18n } = useTranslation();
+
   const [modal, setModal] = useState(false);
   const [theme, setTheme] = useState('dark');
-  const [language, setLanguage] = useState('RU');
+  const [language, setLanguage] = useState(i18n.resolvedLanguage || "");
 
-  const { i18n } = useTranslation();
+  console.log(i18n);
 
   const changeLanguage = (lng: string) => {
     i18n.changeLanguage(lng);
