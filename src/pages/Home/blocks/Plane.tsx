@@ -5,7 +5,8 @@ import Menu from "./Plane/Menu";
 const Plane: FC = () => {
   return (
     <section className={`
-      relative bg-dbg text-white
+      relative dark:bg-dbg bg-brand-300
+      text-white
       bg-[url('/pages/main/avia_head.png')]
       bg-no-repeat bg-right bg-cover
       lg:bg-43% flex items-center justify-center

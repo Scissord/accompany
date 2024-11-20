@@ -4,7 +4,7 @@ import Cards from './blocks/Cards';
 import Form from './blocks/Form';
 import { Footer } from '@components';
 
-const Charters: FC = () => {
+const VIP: FC = () => {
   return (
     <>
       <Header/>
@@ -15,4 +15,4 @@ const Charters: FC = () => {
   )
 }
 
-export default Charters;
+export default VIP;

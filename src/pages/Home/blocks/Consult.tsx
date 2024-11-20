@@ -21,7 +21,7 @@ const Consult: FC = () => {
        flex items-center justify-center
        min-h-[30vh] lg:min-h-[70vh]
     `}>
-      <div className="hidden lg:block absolute inset-0 bg-gradient-to-r w-5/6 from-brand-300 via-brand-100 to-transparent" />
+      <div className="hidden lg:block absolute inset-0 bg-gradient-to-r w-5/6 dark:from-brand-300 dark:via-brand-100 from-stone-400 via-stone-500 to-transparent" />
       <div className="lg:hidden absolute inset-0 bg-brand-200 bg-opacity-80" />
       <div
         ref={ref}

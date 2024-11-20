@@ -17,17 +17,17 @@ const Select: FC<SelectProps>  = ({ value, onChange, options }) => {
   return (
     <div className="relative ml-auto">
       <div
-        className="h-14 p-2 text-white cursor-pointer flex items-center justify-start"
+        className="h-14 p-2 text-white cursor-pointer flex items-center justify-start hover:text-hvr transition duration-300 ease-in-out"
         onClick={() => setIsOpen(!isOpen)}
       >
         {value ? value : ''}
       </div>
       {isOpen && (
-        <div className="absolute z-10 bg-brand-300 border border-white w-[80px]">
+        <div className="absolute z-10 bg-white w-[80px] flex flex-col gap-1 text-black rounded text-sm">
           {options.map((option: any) => (
             <div
               key={option.value}
-              className="h-12 p-2 hover:bg-brand-200 cursor-pointer flex items-center justify-start"
+              className="h-8 hover:bg-gray-300 cursor-pointer flex items-center justify-start transition duration-300 ease-in-out px-2 hover:rounded"
               onClick={() => handleOptionClick(option)}
             >
               {option.label}

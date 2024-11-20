@@ -3,8 +3,8 @@ import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 
 const css = {
-  link: "cursor-pointer",
-  dropMenuLink: "cursor-pointer hover:bg-gray-300 hover:rounded px-2 py-2",
+  link: "cursor-pointer hover:text-hvr transition duration-300 ease-in-out",
+  dropMenuLink: "transition duration-300 ease-in-out cursor-pointer hover:bg-gray-300 hover:rounded px-2 py-2",
 };
 
 export const Navbar: FC = () => {
@@ -47,7 +47,7 @@ export const Navbar: FC = () => {
       {hoverAbout && (
         <div
           ref={dropdownRef}
-          className="absolute top-12 left-6 bg-white flex flex-col text-black rounded"
+          className="absolute top-12 left-6 bg-white flex flex-col gap-3 text-black rounded min-w-[250px] py-3 px-2"
           onMouseLeave={() => setHoverAbout(false)}
         >
           <p
@@ -70,13 +70,13 @@ export const Navbar: FC = () => {
           </p>
         </div>
       )}
-      <p className={css.link} onClick={() => navigate("/accompany/charters")}>
+      <p className={css.link} onClick={() => navigate("/accompany/passenger")}>
         {t('header_passenger')}
       </p>
-      <p className={css.link} onClick={() => navigate("/accompany/charters")}>
+      <p className={css.link} onClick={() => navigate("/accompany/cargo")}>
         {t('header_cargo')}
       </p>
-      <p className={css.link} onClick={() => navigate("/accompany/charters")}>
+      <p className={css.link} onClick={() => navigate("/accompany/vip")}>
         {t('header_vip')}
       </p>
       <p className={css.link} onClick={() => navigate("/accompany/contacts")}>

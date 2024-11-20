@@ -1,8 +1,11 @@
 import type { IRoute } from '@types';
 import Home from '@pages/Home';
 import About from '@pages/About';
-import Charters from '@pages/Charters';
+import AirGuide from '@pages/AirGuide';
+import VIP from '@pages/VIP';
+import Cargo from '@pages/Cargo';
 import Contacts from '@pages/Contacts';
+import Passenger from '@pages/Passenger';
 
 const AppRoutes: IRoute[] = [
   {
@@ -16,8 +19,23 @@ const AppRoutes: IRoute[] = [
 		title: "О нас",
 	},
   {
-		path: "/accompany/charters",
-		element: <Charters/>,
+		path: "/accompany/air-guide",
+		element: <AirGuide/>,
+		title: "Авиагид",
+	},
+  {
+		path: "/accompany/passenger",
+		element: <Passenger/>,
+		title: "Авиагид",
+	},
+  {
+		path: "/accompany/cargo",
+		element: <Cargo/>,
+		title: "Авиагид",
+	},
+  {
+		path: "/accompany/vip",
+		element: <VIP/>,
 		title: "Авиагид",
 	},
   {

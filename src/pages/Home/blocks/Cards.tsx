@@ -46,6 +46,16 @@ const Cards: FC = () => {
     },
   ];
 
+  const css = {
+    button : `
+      w-full bg-white text-brand-100
+      p-2 font-bold hover:bg-black
+      hover:bg-opacity-50
+      hover:text-white
+      transition duration-300 ease-in-out
+    `
+  }
+
   return (
     <section className="bg-brand-100 text-white">
       <div className="container mx-auto grid grid-cols-1 lg:grid-cols-3 gap-6 py-12 px-6 lg:px-0">
@@ -82,7 +92,7 @@ const Cards: FC = () => {
                 <p className="text-left text-[13px]">
                   {t('home_cards_cooperation')}
                 </p>
-                <button className="w-full bg-white text-brand-100 p-2 font-bold">
+                <button className={css.button}>
                   {t('home_cards_submit_button')}
                 </button>
                 <p className="text-left text-[13px] text-gray-400 italic">

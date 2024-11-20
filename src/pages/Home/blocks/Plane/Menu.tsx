@@ -20,9 +20,8 @@ const css = {
     px-6 flex items-center justify-center
     font-semibold dark:hover:bg-white
     hover:bg-black hover:bg-opacity-50
-    transition-transform duration-200 ease-in-out
-    transform active:scale-95 hover:dark:text-dbg
-    hover:text-white
+    hover:dark:text-dbg hover:text-white
+    transition duration-300 ease-in-out
   `
 }
 

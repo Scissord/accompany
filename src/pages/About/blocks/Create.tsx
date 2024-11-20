@@ -1,7 +1,9 @@
 import { FC, useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 const Create: FC = () => {
+  const { t } = useTranslation();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: false });
 
@@ -25,8 +27,8 @@ const Create: FC = () => {
           animate={isInView ? "visible" : "hidden"}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-        Создайте свой идеальный<br/>
-        чартерный рейс
+        {t('about_create_title_first')}<br/>
+        {t('about_create_title_second')}
         </motion.h1>
         <motion.p
           className="mt-4 z-10"
@@ -35,13 +37,13 @@ const Create: FC = () => {
           animate={isInView ? "visible" : "hidden"}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          AVIACONSULTING COMPANY-предоставляет гибкие<br/>
-          графики чартерных рейсов,чтобы соответствовать вашим<br/>
-          потребностям и планированию. Независимо от того, нужно<br/>
-          ли вам чартерный рейс для бизнес-поездки, спортивного<br/>
-          мероприятия или отдыха, мы готовы предоставить вам<br/>
-          индивидуальный план полета, который соответствует<br/>
-          вашим потребностям и требованиям.
+          {t('about_create_description_1')}<br/>
+          {t('about_create_description_2')}<br/>
+          {t('about_create_description_3')}<br/>
+          {t('about_create_description_4')}<br/>
+          {t('about_create_description_5')}<br/>
+          {t('about_create_description_6')}<br/>
+          {t('about_create_description_7')}
         </motion.p>
         <motion.p
           className="mt-4 z-10"
@@ -50,12 +52,12 @@ const Create: FC = () => {
           animate={isInView ? "visible" : "hidden"}
           transition={{ duration: 0.8, delay: 0.6 }}
         >
-          Наши опытные специалисты обеспечат вам высокий<br/>
-          уровень обслуживания и гарантированное<br/>
-          удовлетворение. Мы предлагаем полный комплекс услуг,<br/>
-          включая трансферы, багаж и другие дополнительные<br/>
-          услуги, чтобы вы могли полностью расслабиться и<br/>
-          наслаждаться беззаботным путешествием.
+          {t('about_create_description_8')}<br/>
+          {t('about_create_description_9')}<br/>
+          {t('about_create_description_10')}<br/>
+          {t('about_create_description_11')}<br/>
+          {t('about_create_description_12')}<br/>
+          {t('about_create_description_13')}
         </motion.p>
         <motion.p
           className="mt-4 z-10"
@@ -64,9 +66,9 @@ const Create: FC = () => {
           animate={isInView ? "visible" : "hidden"}
           transition={{ duration: 0.8, delay: 0.8 }}
         >
-          Создайте свой идеальный чартерный рейс с AVIA<br/>
-          CONSULTING COMPANY и переживите незабываемые<br/>
-          впечатления от полета!
+          {t('about_create_description_14')}<br/>
+          {t('about_create_description_15')}<br/>
+          {t('about_create_description_16')}
         </motion.p>
       </div>
     </section>

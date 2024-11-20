@@ -12,7 +12,8 @@ const config: Config = {
         'gbg': "#7C7C7C",
         'brand-100': "#1D3F64",
         'brand-200': "#41607F",
-        'brand-300': "#03355a"
+        'brand-300': "#03355a",
+        'hvr': "#a1a1aa",
       },
       backgroundSize: {
         '43%': '43%',

@@ -4,6 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  @apply: transition-colors duration-300 ease-in-out;
+}
+
 /* HIDE NUMBER INPUT ARROWS */
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,

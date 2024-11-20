@@ -1,0 +1,16 @@
+.iconLightWrapper:hover .moonPath {
+  stroke: #a1a1aa;
+  transition: stroke 0.3s ease-in-out;
+}
+
+.cls-1 {
+  fill: none;
+  stroke: #fff;
+  stroke-linecap: round;
+  stroke-miterlimit: 10;
+}
+
+.iconDarkWrapper:hover .cls-1 {
+  stroke: #a1a1aa;
+  transition: stroke 0.3s ease-in-out;
+}

@@ -1,10 +1,12 @@
 import { FC } from "react";
+import { useTranslation } from "react-i18next";
 
 const Events: FC = () => {
+  const { t } = useTranslation();
   return (
     <div className="bg-gbg text-white">
       <div className="container mx-auto py-12 h-full px-6 lg:px-0">
-        <p className="text-3xl font-bold">События</p>
+        <p className="text-3xl font-bold">{t('home_events_title')}</p>
         <div className="flex flex-col lg:flex-row justify-between gap-12 h-full py-3">
           <div className="flex flex-col gap-6 w-full lg:w-1/3 h-full">
             <div className="h-[200px] w-full bg-white"/>
