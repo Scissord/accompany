@@ -23,6 +23,11 @@ export const Navbar: FC = () => {
     }
   };
 
+  const handleClickHoverAbout = (url: string) => {
+    navigate(url);
+    setHoverAbout(false);
+  };
+
   useEffect(() => {
     if (hoverAbout) {
       document.addEventListener("mousedown", handleClickOutside);
@@ -52,19 +57,19 @@ export const Navbar: FC = () => {
         >
           <p
             className={css.dropMenuLink}
-            onClick={() => navigate("/accompany/charters")}
+            onClick={() => handleClickHoverAbout("/accompany/air-guide")}
           >
             {t('header_about_guide')}
           </p>
           <p
             className={css.dropMenuLink}
-            onClick={() => navigate("/accompany/charters")}
+            onClick={() => handleClickHoverAbout("/accompany/news")}
           >
             {t('header_about_news')}
           </p>
           <p
             className={css.dropMenuLink}
-            onClick={() => navigate("/accompany/charters")}
+            onClick={() => handleClickHoverAbout("/accompany/faq")}
           >
             {t('header_about_safety')}
           </p>

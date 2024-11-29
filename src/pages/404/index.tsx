@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import { useNavigate } from 'react-router-dom';
+import notFoundSrc from "/pages/notfound/notfound.jpg";
 
 const NotFound: FC = () => {
   const navigate = useNavigate();
@@ -13,7 +14,7 @@ const NotFound: FC = () => {
         На главную
       </button>
       <img
-        src="/pages/notfound/notfound.jpg"
+        src={notFoundSrc}
         alt="404"
         className='w-[50%]'
       />

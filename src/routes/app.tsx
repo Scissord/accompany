@@ -2,6 +2,7 @@ import type { IRoute } from '@types';
 import Home from '@pages/Home';
 import About from '@pages/About';
 import AirGuide from '@pages/AirGuide';
+import Faq from '@pages/Faq';
 import VIP from '@pages/VIP';
 import Cargo from '@pages/Cargo';
 import Contacts from '@pages/Contacts';
@@ -24,25 +25,30 @@ const AppRoutes: IRoute[] = [
 		title: "Авиагид",
 	},
   {
+		path: "/accompany/faq",
+		element: <Faq/>,
+		title: "Часто задаваемые вопросы",
+	},
+  {
 		path: "/accompany/passenger",
 		element: <Passenger/>,
-		title: "Авиагид",
+		title: "Пассажирские чартеры",
 	},
   {
 		path: "/accompany/cargo",
 		element: <Cargo/>,
-		title: "Авиагид",
+		title: "Грузовые чартеры",
 	},
   {
 		path: "/accompany/vip",
 		element: <VIP/>,
-		title: "Авиагид",
+		title: "VIP чартеры",
 	},
   {
     path: "/accompany/contacts",
 		element: <Contacts/>,
 		title: "Контакты",
-  }
+  },
 ];
 
 export default AppRoutes;

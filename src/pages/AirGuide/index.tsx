@@ -12,7 +12,7 @@ const AirGuide: FC = () => {
       <Form/>
       <Footer/>
     </>
-  )
-}
+  );
+};
 
 export default AirGuide;
