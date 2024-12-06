@@ -1,18 +1,24 @@
 import { FC } from 'react'
 import Header from './blocks/Header';
+import Title from './blocks/Title';
+import WhyUs from './blocks/WhyUs';
+import Cargo from './blocks/Cargo';
+import Harmonic from './blocks/Harmonic';
 import Cards from './blocks/Cards';
-import Form from './blocks/Form';
 import { Footer } from '@components';
 
-const Cargo: FC = () => {
+const VIP: FC = () => {
   return (
     <>
       <Header/>
+      <Title/>
+      <WhyUs/>
+      <Cargo/>
+      <Harmonic/>
       <Cards/>
-      <Form/>
       <Footer/>
     </>
   )
 }
 
-export default Cargo;
+export default VIP;

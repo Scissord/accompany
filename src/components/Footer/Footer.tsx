@@ -6,11 +6,11 @@ export const Footer: FC = () => {
   const { t } = useTranslation();
 
   return (
-    <footer className="h-[55vh] lg:h-[40vh] dark:bg-brand-100 bg-white dark:text-white text-black py-12 lg:py-20 relative">
+    <footer className="min-h-[20vh] lg:min-h-[40vh] dark:bg-brand-100 bg-white dark:text-white text-black py-12 lg:py-20 relative">
       <div className="footer" />
       <div className="container mx-auto h-full px-6 lg:px-0">
-        <div className="h-[30%] lg:h-[70%] w-full flex flex-col lg:flex-row justify-between">
-          <img src="logo.png" className="w-[35%] sm:w-[20%] lg:w-[10%] h-12" alt="logo" />
+        <div className="h-[20vh] w-full flex flex-col lg:flex-row justify-between">
+          <img src="logo.png" className="w-[35%] sm:w-[20%] lg:w-[10%] h-12 lg:h-14" alt="logo" />
           <div className="w-[20%] flex items-start justify-between gap-10">
             <div className="flex flex-col gap-3">
               <p>?????</p>

@@ -1,18 +1,22 @@
 import { FC } from 'react'
 import Header from './blocks/Header';
+import Title from './blocks/Title';
+import Plane from './blocks/Plane';
+import Steps from './blocks/Steps';
 import Cards from './blocks/Cards';
-import Form from './blocks/Form';
 import { Footer } from '@components';
 
-const Passenger: FC = () => {
+const VIP: FC = () => {
   return (
     <>
       <Header/>
+      <Title/>
+      <Plane/>
+      <Steps/>
       <Cards/>
-      <Form/>
       <Footer/>
     </>
   )
 }
 
-export default Passenger;
+export default VIP;
