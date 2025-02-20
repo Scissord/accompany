@@ -1,8 +1,8 @@
 import { FC } from 'react'
 
 type TabsProps = {
-  tab: Number,
-  setTab: Function,
+  tab: number,
+  setTab: (val: number) => void,
   tabs: any[],
 };
 
@@ -10,8 +10,8 @@ const Tabs: FC<TabsProps> = (props) => {
   const { tab, setTab, tabs } = props;
 
   return (
-    <div className='h-[30vh] bg-brand-300 text-white'>
-      <div className='w-full h-full container mx-auto flex items-center justify-between relative'>
+    <div className='h-full lg:h-[30vh] bg-brand-300 text-white'>
+      <div className='w-full h-full container mx-auto flex flex-col lg:flex-row items-center justify-between relative py-8 lg:py-0 lg:gap-0 gap-12'>
         {tabs.map((t) => (
           <div
             key={t.value}

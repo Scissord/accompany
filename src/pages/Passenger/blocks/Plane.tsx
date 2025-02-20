@@ -1,8 +1,6 @@
-import React, { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect } from 'react';
 
-type Props = {};
-
-const Plane = (props: Props) => {
+const Plane = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const sectionRefs = useRef<HTMLDivElement[]>([]);
 
@@ -27,19 +25,19 @@ const Plane = (props: Props) => {
   const descriptions = [
     {
       title: 'Гибкость и индивидуальный подход',
-      text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur perspiciatis vitae quidem, repudiandae minima error id nihil officia voluptates, maiores magnam necessitatibus esse praesentium natus quod doloremque temporibus possimus dolorem.',
+      text: 'Чартерные рейсы предоставляют вам полную свободу выбора. Вы сами определяете время вылета и прибытия, а также маршрут, что позволяет избегать пересадок и лишних ожиданий. Мы подберём самолёт под любые ваши потребности, будь то небольшой частный джет или вместительный авиалайнер для группы.',
     },
     {
       title: 'Комфорт и приватность',
-      text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur perspiciatis vitae quidem, repudiandae minima error id nihil officia voluptates, maiores magnam necessitatibus esse praesentium natus quod doloremque temporibus possimus dolorem.',
+      text: 'Чартерные перевозки обеспечивают высокий уровень комфорта и приватности. Весь рейс будет предоставлен исключительно для вас и вашей группы, что позволяет насладиться полётом в спокойной обстановке и с учётом всех ваших пожеланий.',
     },
     {
       title: 'Экономия времени',
-      text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur perspiciatis vitae quidem, repudiandae minima error id nihil officia voluptates, maiores magnam necessitatibus esse praesentium natus quod doloremque temporibus possimus dolorem.',
+      text: 'Чартерный рейс позволяет избежать длинных очередей и стандартных процедур аэропорта. Наши клиенты проходят регистрацию и предполётные формальности по упрощённой схеме, что значительно экономит время и делает путешествие более приятным.',
     },
     {
       title: 'Безопасность',
-      text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur perspiciatis vitae quidem, repudiandae minima error id nihil officia voluptates, maiores magnam necessitatibus esse praesentium natus quod doloremque temporibus possimus dolorem.',
+      text: 'Мы работаем только с сертифицированными авиакомпаниями и тщательно проверяем каждое воздушное судно перед вылетом. Высококвалифицированные экипажи и соблюдение всех стандартов безопасности гарантируют надёжность и спокойствие в пути.',
     },
   ];
 

@@ -5,34 +5,34 @@ const Steps: FC = () => {
     <div className='min-h-[50vh] text-white bg-brand-300'>
       <div className='py-12 container mx-auto flex flex-col items-center justify-center gap-6 px-6 lg:px-0'>
         <h1 className='text-3xl'>Какие возможности открывает VIP чартер?</h1>
-        <div className='flex flex-col lg:flex-row items-center justify-between gap-6'>
+        <div className='grid grid-cols-1 lg:grid-cols-4 gap-8'>
           <div className='flex flex-col items-center gap-6'>
-            <img src='pages/about/aeroflot.png' className='rounded-full border w-40 h-40'/>
+            <img src='pages/passenger/c1.png' className='rounded-full border w-40 h-40 object-cover'/>
             <p className='text-center'>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis nesciunt ut quam non repellat vero inventore doloremque quas blanditiis aliquid illo facere reprehenderit vel provident, recusandae fugiat odit in dolorum.
+              Корпоративные поездки и командировки
             </p>
           </div>
           <div className='flex flex-col items-center gap-6'>
-            <img src='pages/about/aeroflot.png' className='rounded-full border w-40 h-40'/>
+            <img src='pages/passenger/c2.jpg' className='rounded-full border w-40 h-40 object-cover'/>
             <p className='text-center'>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis nesciunt ut quam non repellat vero inventore doloremque quas blanditiis aliquid illo facere reprehenderit vel provident, recusandae fugiat odit in dolorum.
+              Организация мероприятий
             </p>
           </div>
           <div className='flex flex-col items-center gap-6'>
-            <img src='pages/about/aeroflot.png' className='rounded-full border w-40 h-40'/>
+            <img src='pages/passenger/c1.png' className='rounded-full border w-40 h-40 object-cover'/>
             <p className='text-center'>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis nesciunt ut quam non repellat vero inventore doloremque quas blanditiis aliquid illo facere reprehenderit vel provident, recusandae fugiat odit in dolorum.
+              Отдых с семьёй или друзьями
             </p>
           </div>
           <div className='flex flex-col items-center gap-6'>
-            <img src='pages/about/aeroflot.png' className='rounded-full border w-40 h-40'/>
+            <img src='pages/passenger/c2.jpg' className='rounded-full border w-40 h-40 object-cover'/>
             <p className='text-center'>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis nesciunt ut quam non repellat vero inventore doloremque quas blanditiis aliquid illo facere reprehenderit vel provident, recusandae fugiat odit in dolorum.
+              Срочные перелёты
             </p>
           </div>
         </div>
         <p className='text-gray-200 font-semibold'>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore sed, sit, iusto corrupti nobis voluptatem ullam saepe alias ut quod adipisci eos ab vel cupiditate laborum accusamus, voluptatibus quos architecto!
+          Мы предлагаем полный спектр услуг по организации чартерных пассажирских перевозок, начиная от подбора оптимального самолёта и планирования маршрута до организации комфортного трансфера и дополнительных услуг на борту. Наши специалисты готовы создать для вас индивидуальное предложение, учитывая все ваши требования и пожелания.
         </p>
       </div>
     </div>

@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 const Create: FC = () => {
   const { t } = useTranslation();
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: false });
+  const isInView = useInView(ref);
 
   const textVariants = {
     hidden: { opacity: 0, x: -100 },

@@ -1,10 +1,9 @@
 import { FC, useRef } from "react";
-import { motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 
 const Title: FC = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: false });
 
   const { t } = useTranslation();
 
@@ -18,7 +17,7 @@ const Title: FC = () => {
       ref={ref}
       className="container mx-auto px-8 lg:px-0 h-full py-12 lg:py-0 z-10"
       initial="hidden"
-      animate={isInView ? "visible" : "hidden"}
+      animate={"visible"}
       transition={{ duration: 0.8, ease: "easeInOut" }}
     >
       <motion.h1

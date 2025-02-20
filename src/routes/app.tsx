@@ -7,6 +7,7 @@ import VIP from '@pages/VIP';
 import Cargo from '@pages/Cargo';
 import Contacts from '@pages/Contacts';
 import Passenger from '@pages/Passenger';
+import News from '@pages/News';
 
 const AppRoutes: IRoute[] = [
   {
@@ -27,7 +28,7 @@ const AppRoutes: IRoute[] = [
   {
 		path: "/accompany/faq",
 		element: <Faq/>,
-		title: "Часто задаваемые вопросы",
+		title: "Безопасность",
 	},
   {
 		path: "/accompany/passenger",
@@ -48,6 +49,11 @@ const AppRoutes: IRoute[] = [
     path: "/accompany/contacts",
 		element: <Contacts/>,
 		title: "Контакты",
+  },
+  {
+    path: "/accompany/news",
+		element: <News/>,
+		title: "Новости",
   },
 ];
 

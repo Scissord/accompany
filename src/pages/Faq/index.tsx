@@ -11,22 +11,22 @@ const tabs = [
   {
     value: 1,
     label: 'Перед взлетом',
-    src: 'icons/moon.svg'
+    src: 'pages/faq/plane1.svg'
   },
   {
     value: 2,
     label: 'В полете',
-    src: 'icons/moon.svg'
+    src: 'pages/faq/plane2.svg'
   },
   {
     value: 3,
     label: 'Посадка',
-    src: 'icons/moon.svg'
+    src: 'pages/faq/plane3.svg'
   },
 ];
 
 const Faq: FC = () => {
-  const [tab, setTab] = useState<Number>(1);
+  const [tab, setTab] = useState<number>(1);
   return (
     <>
       <Header/>

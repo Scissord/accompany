@@ -10,7 +10,10 @@ export const Footer: FC = () => {
       <div className="footer" />
       <div className="container mx-auto h-full px-6 lg:px-0">
         <div className="h-[20vh] w-full flex flex-col lg:flex-row justify-between">
-          <img src="logo.png" className="w-[35%] sm:w-[20%] lg:w-[10%] h-12 lg:h-14" alt="logo" />
+          <div>
+            <img src="logo.png" alt="logo" />
+          </div>
+
           <div className="w-[20%] flex items-start justify-between gap-10">
             <div className="flex flex-col gap-3">
               <p>?????</p>
@@ -33,7 +36,7 @@ export const Footer: FC = () => {
           <button className="border border-slate-400 py-2 px-4 rounded-full hover:bg-gray-300 hover:text-black transition duration-300 ease-in-out cursor-pointer">
             {t('home_footer_call_back')}
           </button>
-          <p className=" whitespace-nowrap">Design by Quasar</p>
+          <p className="whitespace-nowrap">Design by Quasar</p>
         </div>
       </div>
     </footer>

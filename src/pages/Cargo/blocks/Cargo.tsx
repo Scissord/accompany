@@ -1,22 +1,21 @@
-import React from 'react'
-
-type Props = {}
-
-const Cargo = (props: Props) => {
+const Cargo = () => {
   return (
     <div className='min-h-[20vh] bg-brand-300 text-white py-12'>
-      <div className='container mx-auto px-6 lg:px-0'>
+      <div className='container mx-auto flex items-center gap-3 px-6 lg:px-0'>
         <div className='w-full lg:w-1/2 flex flex-col gap-3'>
           <h1 className='text-2xl font-bold'>Авиаперевозки грузов</h1>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam odit perferendis a et, debitis fugit. Qui esse ut quod. Est ratione provident recusandae veniam quae! Molestiae sed harum voluptate ex!
+            На протяжении десятилетий аваперевозка грузов остаётся наиболее быстрым и надёжным способом доставки, обеспечивая безопасность и своевременность. С Avia Consulting Company у вас откроются новые возможности для грузовых авиаперевозок.
           </p>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam odit perferendis a et, debitis fugit. Qui esse ut quod. Est ratione provident recusandae veniam quae! Molestiae sed harum voluptate ex!
+            Наши опытные специалисты гарантируют соблюдение всех технических норм при перевозке грузов по Казахстану. Многолетний опыт и необходимые лицензии позволяют нам безопасно и качественно осуществлять перевозки, включая доставку опасных грузов.
           </p>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam odit perferendis a et, debitis fugit. Qui esse ut quod. Est ratione provident recusandae veniam quae! Molestiae sed harum voluptate ex!
+            Высокая надежность и оперативность делают авиаперевозки всё более популярными для трансконтинентальных маршрутов. Мы готовы доставить груз любой сложности, включая международные перевозки опасных грузов.
           </p>
+        </div>
+        <div className='w-1/2 hidden lg:flex flex-col gap-3'>
+          <img src="pages/cargo/plane.png" alt="plane"/>
         </div>
       </div>
     </div>

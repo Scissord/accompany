@@ -1,11 +1,14 @@
 import { FC, useRef } from 'react';
-import { motion, useInView } from 'framer-motion';
+import { motion, useInView  } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 
 
 
 const Cards: FC = () => {
   const { t } = useTranslation();
+
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
 
   const cards = [
     {
@@ -57,15 +60,11 @@ const Cards: FC = () => {
   }
 
   return (
-    <section className="bg-brand-100 text-white">
+    <section ref={ref} className="bg-[#133457] text-white">
       <div className="container mx-auto grid grid-cols-1 lg:grid-cols-3 gap-6 py-12 px-6 lg:px-0">
         {cards.map((card, index) => {
-          const ref = useRef(null);
-          const isInView = useInView(ref, { once: false });
-
           return (
             <motion.div
-              ref={ref}
               key={card.id}
               className={`relative p-6 lg:p-12 bg-brand-200 rounded`}
               style={{

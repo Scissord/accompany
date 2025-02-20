@@ -1,0 +1,20 @@
+.header_vip {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  height: 10vh;
+  background: #7C7C7C;
+  color: white;
+}
+
+@media (min-width: 1024px) {
+  .header_vip {
+    height: 40vh;
+    position: relative;
+    display: block;
+    background-image: url("/pages/vip/header.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+}

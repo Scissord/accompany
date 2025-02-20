@@ -11,9 +11,9 @@ import { useTranslation } from "react-i18next";
 const css = {
   container: `
     container bg-white dark:bg-brand-300
-    rounded pt-4 pb-8 px-6 hidden lg:block
+    rounded-xl pt-4 pb-8 px-6 hidden lg:block
     z-20 absolute bottom-[-80px] left-1/2
-    -translate-x-1/2
+    -translate-x-1/2 border-8 border-white
   `,
   button: `
     h-14 text-sm bg-brand-100 whitespace-nowrap

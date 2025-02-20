@@ -7,7 +7,7 @@ type Props = {
 
 const Content: FC<Props> = ({ steps }) => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: false });
+  const isInView = useInView(ref, { once: true });
 
   const titleVariants = {
     hidden: { opacity: 0, x: -100 },

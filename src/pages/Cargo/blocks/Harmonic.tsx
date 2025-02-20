@@ -8,23 +8,23 @@ const Harmonic = () => {
       blocks: [
         {
           id: 0,
-          label: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate quaerat accusantium molestias veritatis iste exercitationem totam minus non ipsa eum, quidem at praesentium odio nobis mollitia suscipit officia, ad ex.'
+          label: 'К воздушной перевозке принимается груз, который по своему качеству, свойствам, объему, весу и упаковке допущен к транспортировке воздушными судами в соответствии с законодательством РК, а также законодательства страны, на территорию, с территории или через территорию которой осуществляется перевозка груза.'
         },
         {
           id: 1,
-          label: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate quaerat accusantium molestias veritatis iste exercitationem totam minus non ipsa eum, quidem at praesentium odio nobis mollitia suscipit officia, ad ex.'
+          label: 'Некоторые виды особых грузов (скоропортящиеся, опасные, живность), а также тяжеловесные и негабаритные грузы, принимаются к перевозке по согласованию с авиакомпанией в соответствии с условиями, изложенными в настоящих Правилах и требованиями внутренних, международных или иных нормативных документов.'
         },
         {
           id: 2,
-          label: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate quaerat accusantium molestias veritatis iste exercitationem totam minus non ipsa eum, quidem at praesentium odio nobis mollitia suscipit officia, ad ex.'
+          label: 'Груз не должен изменять химических, физических и иных свойств, которые могут привести к его порче или повышению степени опасности в период перевозки.'
         },
         {
           id: 3,
-          label: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate quaerat accusantium molestias veritatis iste exercitationem totam minus non ipsa eum, quidem at praesentium odio nobis mollitia suscipit officia, ad ex.'
+          label: 'Габариты груза ограничиваются размерами загрузочным люков. Общий объём перевозимого на воздушном судне груза ограничен размерами багажных грузовых отсеков используемых воздушных судов. Общий вес перевозимого груза ограничивается допустимой предельной коммерческой загрузкой.'
         },
         {
           id: 4,
-          label: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate quaerat accusantium molestias veritatis iste exercitationem totam minus non ipsa eum, quidem at praesentium odio nobis mollitia suscipit officia, ad ex.'
+          label: 'Общий вес и объем перевозимого в багажных отсеках груза ограничивается допустимой предельной загрузкой багажного отсека согласно Руководству по центровке и балансировке соответствующего типа воздушного судна передельной коммерческой загрузкой и (или) объёмами грузовых отсеков, используемых типов воздушных судов.'
         },
       ],
       is_visible: false
@@ -33,10 +33,6 @@ const Harmonic = () => {
       id: 1,
       title: 'Грузовая накладная',
       blocks: [
-        {
-          id: 0,
-          label: 'Подраздел 2.'
-        },
       ],
       is_visible: false
     },
@@ -78,7 +74,7 @@ const Harmonic = () => {
     },
   ]);
 
-  const handleChangeItem = (index: Number) => {
+  const handleChangeItem = (index: number) => {
     setItems((prevItems) =>
       prevItems.map((item, i) =>
         i === index ? { ...item, is_visible: !item.is_visible } : { ...item, is_visible: false }

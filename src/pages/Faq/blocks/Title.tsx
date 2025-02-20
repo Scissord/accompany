@@ -1,22 +1,21 @@
-import { FC } from 'react'
-
-const Title: FC = () => {
+const Title = () => {
   return (
-    <div className='h-[92vh] text-white'>
-      <div className='h-[50%] bg-dbg'>
-      </div>
-      <div className='h-[50%] bg-hvr p-12'>
-        <div className='w-full h-full container mx-auto flex flex-col justify-center gap-3'>
-          <h1 className='text-3xl font-bold'>Часто задаваемые вопросы</h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates labore aut quis voluptate aliquam consequuntur natus sunt velit, nobis esse modi dolor. Facere, asperiores nulla recusandae aspernatur culpa iure omnis!
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. In nesciunt, non inventore facere repudiandae ex molestiae repellat! Ea facere accusantium recusandae nulla rerum! Suscipit, inventore odio. Perspiciatis unde itaque earum?
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit saepe provident totam accusantium perspiciatis officia, ullam earum, ipsam quisquam doloribus, quam tempore facilis illum maiores reprehenderit vel dignissimos optio quo!
-          </p>
-        </div>
+    <div className='h-full lg:h-[50vh] bg-dbg text-white'>
+      <div className='container mx-auto flex flex-col justify-center gap-8 h-full p-6 lg:px-0'>
+        <h1 className='font-bold text-3xl'>
+          Безопасность
+        </h1>
+        <p className="text-xl">
+          Добро пожаловать в раздел «Часто задаваемые вопросы»! Мы собрали для вас ответы
+          на основные вопросы, связанные с арендой частных самолетов и вертолетов. Здесь вы
+          найдете информацию о том, как забронировать чартерный рейс, узнать детали полета,
+          оформить необходимые документы и многое другое. Мы стремимся сделать процесс
+          организации полета простым и удобным для вас. Если у вас возникнут дополнительные
+          вопросы, наша команда всегда готова помочь.
+        </p>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Title;
+export default Title
