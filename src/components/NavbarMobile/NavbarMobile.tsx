@@ -43,6 +43,9 @@ export const NavbarMobile: FC = () => {
             </div>
             <nav className="space-y-4 mt-8">
               <p className={css.link} onClick={() => navigate("/accompany/about")}>О компании</p>
+              <p className={css.link} onClick={() => navigate("/accompany/air-guide")}>Гид по самолетам</p>
+              <p className={css.link} onClick={() => navigate("/accompany/news")}>Новости</p>
+              <p className={css.link} onClick={() => navigate("/accompany/faq")}>Безопасность</p>
               <p className={css.link} onClick={() => navigate("/accompany/charters")}>Пассажирский чартер</p>
               <p className={css.link} onClick={() => navigate("/accompany/charters")}>Грузовой чартер</p>
               <p className={css.link} onClick={() => navigate("/accompany/charters")}>VIP-чартер</p>
