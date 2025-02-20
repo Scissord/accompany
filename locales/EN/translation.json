@@ -1,8 +1,9 @@
 {
+  "header_menu": "Menu",
   "header_about": "About the Company",
   "header_about_guide": "Aircraft Guide",
   "header_about_news": "News",
-  "header_about_safety": "Safety",
+  "header_about_safety": "Safety & FAQ",
   "header_passenger": "Passenger Charter",
   "header_cargo": "Cargo Charter",
   "header_vip": "VIP Charter",

@@ -1,8 +1,9 @@
 {
+  "header_menu": "Меню",
   "header_about": "О компании",
   "header_about_guide": "Гид по самолетам",
   "header_about_news": "Новости",
-  "header_about_safety": "Безопасность",
+  "header_about_safety": "Безопасность & FAQ",
   "header_passenger": "Пассажирский чартер",
   "header_cargo": "Грузовой чартер",
   "header_vip": "VIP-чартер",
