@@ -7,7 +7,7 @@ const Plane: FC = () => {
     <section className={`
       relative dark:bg-dbg
       text-white bg-brand-300
-      bg-[url("pages/main/bg.jpg")]
+      bg-[url("/pages/main/bg.jpg")]
       bg-cover bg-center bg-no-repeat
       flex items-center justify-center
       h-full lg:min-h-[70vh]
