@@ -90,12 +90,12 @@ const Menu: FC = () => {
                 <ul className="absolute top-16 left-0 bg-brand-100 flex flex-col text-white rounded overflow-y-auto w-[250px] bg-opacity-50 py-3 min-h-[50px] max-h-[300px]">
                   {filteredFromAirports.map((airport) => (
                     <li className="hover:bg-brand-300 py-1 px-2 cursor-pointer" key={airport.icao} onClick={() => {
-                      const from = `${airport.name} ${airport.icao}`;
+                      const from = `${airport.name} ${airport.iata}`;
                       localStorage.setItem('from', from);
                       setUserInfo({ ...userInfo, from });
                       setFilteredFromAirports([]);
                     }}>
-                      {airport.name} ({airport.icao})
+                      {airport.name} ({airport.iata})
                     </li>
                   ))}
                 </ul>
@@ -140,12 +140,12 @@ const Menu: FC = () => {
                 <ul className="absolute top-16 left-0 bg-brand-100 flex flex-col text-white rounded overflow-y-auto w-[250px] bg-opacity-50 py-3 min-h-[50px] max-h-[300px]">
                   {filteredToAirports.map((airport) => (
                     <li className="hover:bg-brand-300 py-1 px-2 cursor-pointer" key={airport.icao} onClick={() => {
-                      const to = `${airport.name} ${airport.icao}`;
+                      const to = `${airport.name} ${airport.iata}`;
                       localStorage.setItem('to', to);
                       setUserInfo({ ...userInfo, to });
                       setFilteredToAirports([]);
                     }}>
-                      {airport.name} ({airport.icao})
+                      {airport.name} ({airport.iata})
                     </li>
                   ))}
                 </ul>

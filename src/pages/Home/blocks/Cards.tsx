@@ -1,12 +1,12 @@
 import { FC, useRef } from 'react';
 import { motion, useInView  } from 'framer-motion';
+import { useViewContext } from "@context";
 import { useTranslation } from 'react-i18next';
-
-
 
 const Cards: FC = () => {
   const { t } = useTranslation();
 
+  const context = useViewContext();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
@@ -91,7 +91,10 @@ const Cards: FC = () => {
                 <p className="text-left text-[13px]">
                   {t('home_cards_cooperation')}
                 </p>
-                <button className={css.button}>
+                <button
+                  onClick={() => context?.modal.set(true)}
+                  className={css.button}
+                >
                   {t('home_cards_submit_button')}
                 </button>
                 <p className="text-left text-[13px] text-gray-400 italic">

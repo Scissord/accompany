@@ -1,8 +1,10 @@
 import { FC } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useViewContext } from "@context";
 
 const Services: FC = () => {
   const { t } = useTranslation();
+  const context = useViewContext();
 
   return (
     <section className="relative bg-white">
@@ -46,7 +48,10 @@ const Services: FC = () => {
             {t('about_services_card1_annotation')}
           </p>
           <div className='flex items-center gap-6'>
-            <button className="w-[250px] bg-white text-brand-100 p-2 font-bold hover:bg-black transition duration-300 ease-in-out hover:text-white">
+            <button
+              onClick={() => context?.modal.set(true)}
+              className="w-[250px] bg-white text-brand-100 p-2 font-bold hover:bg-black transition duration-300 ease-in-out hover:text-white"
+            >
               {t('about_services_send')}
             </button>
             <p className='text-xs'>
@@ -93,7 +98,10 @@ const Services: FC = () => {
             {t('about_services_card2_annotation')}
           </p>
           <div className='flex items-center gap-6'>
-          <button className="w-[250px] bg-white text-brand-100 p-2 font-bold hover:bg-black transition duration-300 ease-in-out hover:text-white">
+          <button
+            onClick={() => context?.modal.set(true)}
+            className="w-[250px] bg-white text-brand-100 p-2 font-bold hover:bg-black transition duration-300 ease-in-out hover:text-white"
+          >
               {t('about_services_send')}
             </button>
             <p className='text-xs'>
@@ -120,7 +128,10 @@ const Services: FC = () => {
             {t('about_services_card3_annotation')}
           </p>
           <div className='flex items-center gap-6'>
-            <button className="w-[250px] bg-white text-brand-100 p-2 font-bold hover:bg-black transition duration-300 ease-in-out hover:text-white">
+            <button
+              onClick={() => context?.modal.set(true)}
+              className="w-[250px] bg-white text-brand-100 p-2 font-bold hover:bg-black transition duration-300 ease-in-out hover:text-white"
+            >
               {t('about_services_send')}
             </button>
             <p className='text-xs'>
