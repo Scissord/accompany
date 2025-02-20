@@ -17,6 +17,7 @@ const config: Config = {
       },
       backgroundSize: {
         '43%': '43%',
+        '50%': '50%',
       },
     },
   },

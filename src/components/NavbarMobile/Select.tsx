@@ -23,7 +23,7 @@ const Select: FC<SelectProps>  = ({ value, onChange, options }) => {
         {value ? value : ''}
       </div>
       {isOpen && (
-        <div className="absolute z-10 bg-white w-[80px] flex flex-col gap-1 text-black rounded text-sm border border-black">
+        <div className="absolute z-10 bg-brand-100 bg-opacity-50 w-[80px] flex flex-col gap-1 text-white rounded text-sm border border-black">
           {options.map((option: any) => (
             <div
               key={option.value}

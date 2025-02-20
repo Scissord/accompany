@@ -9,35 +9,43 @@ const Events: FC = () => {
         <p className="text-3xl font-bold">{t('home_events_title')}</p>
         <div className="flex flex-col lg:flex-row justify-between gap-12 h-full py-3">
           <div className="flex flex-col gap-6 w-full lg:w-1/3 h-full">
-            <div className="h-[200px] w-full bg-white"/>
-            <p className="text-xl font-bold">Безопасность</p>
+            <div className="h-full w-full">
+              <img src="pages/news/n1.jpg" className="w-full h-full object-cover" alt="pages/news/n1.jpg"/>
+            </div>
+            <p className="text-xl font-bold">К строительству трех аэропортов приступили в Казахстане</p>
             <p>
-              Свыше 200 клиентов по всему миру доверяют нам
-              организацию своих деловых и личных поездок, а
-              также перевозку грузов
+              По поручению Главы государства для развития внутреннего туризма и пассажирских авиаперевозок в Казахстане приступили к строительству трех новых аэропортов в курортных зонах Зайсан, Катон-Карагай и Кендирли.
             </p>
-            <p className="underline cursor-pointer">Читать далее</p>
+            <a href="https://primeminister.kz/ru/news/k-stroitelstvu-trekh-aeroportov-pristupili-v-kazakhstane-29599" target="_blank" className="text-lg text-white cursor-pointer hover:underline">
+              Первоисточник:
+              https://primeminister.kz/ru/news/k-stroitelstvu-trekh-aeroportov-pristupili-v-kazakhstane-29599
+            </a>
           </div>
           <div className="flex flex-col gap-6 w-full lg:w-1/3 h-full bg-brand-100 py-6 px-3">
-            <div className="h-[200px] w-full bg-brand-200"/>
-            <p className="text-xl font-bold">Новые возможности</p>
+            <div className="h-full w-full">
+              <img src="pages/news/n2.jpg" className="w-full h-full object-cover" alt="pages/news/n2.jpg"/>
+            </div>
+            <p className="text-xl font-bold">Авиакомпании вводят ограничения на перевозку популярных гаджетов</p>
             <p>
-              Свыше 200 клиентов по всему миру доверяют нам
-              организацию своих деловых и личных поездок, а
-              также перевозку грузов
+              Портативные аккумуляторы (пауэрбанки) и электронные сигареты будут запрещены к провозу в ручной клади на верхней полке самолетов с 1 марта в Южной Корее, передает Avianews со ссылкой на Aviapages.
             </p>
-            <p className="underline cursor-pointer">Читать далее</p>
+            <a href="https://avianews.kz/grazhdanskaya-aviacziya/aviakompanii-vvodyat-ogranicheniya-na-perevozku-populyarnyh-gadzhetov/" target="_blank" className="text-lg text-white cursor-pointer hover:underline">
+              Первоисточник:
+              https://avianews.kz/grazhdanskaya-aviacziya/aviakompanii-vvodyat-ogranicheniya-na-perevozku-populyarnyh-gadzhetov/
+            </a>
           </div>
           <div className="flex flex-col gap-6 w-full lg:w-1/3 h-full">
-            <p className="text-xl font-bold">Новые возможности</p>
+            <p className="text-xl font-bold">Казахстан первым в ЦА принял план по сокращению выбросов CO2 в авиации</p>
             <p>
-              Рады представитьвам наш новый самолет,доступный для
-              чартерных рейсов! Этот современный лайнер
-              объединяет передовые технологии, непревзойденный
-              комфорт и высокие стандарты безопасности
+              Казахстан первым в Центральной Азии поддержал инициативу ИКАО, приняв Национальный план по снижению выбросов СО2 в окружающую среду, передает Avianews со ссылкой на пресс-службу КГА МТ РК.
             </p>
-            <p className="underline cursor-pointer">Читать далее</p>
-            <div className="h-[200px] w-full bg-white"/>
+            <a href="https://avianews.kz/grazhdanskaya-aviacziya/aviakompanii-vvodyat-ogranicheniya-na-perevozku-populyarnyh-gadzhetov/" target="_blank" className="text-lg text-white cursor-pointer hover:underline">
+              Первоисточник:
+              https://avianews.kz/grazhdanskaya-aviacziya/aviakompanii-vvodyat-ogranicheniya-na-perevozku-populyarnyh-gadzhetov/
+            </a>
+            <div className="h-full w-full">
+              <img src="pages/news/n3.jpeg" className="w-full h-full object-cover" alt="pages/news/n3.jpeg"/>
+            </div>
           </div>
         </div>
       </div>

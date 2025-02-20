@@ -52,7 +52,7 @@ export const Navbar: FC = () => {
       {hoverAbout && (
         <div
           ref={dropdownRef}
-          className="absolute top-12 left-6 bg-white flex flex-col gap-3 text-black rounded min-w-[250px] py-3 px-2"
+          className="absolute top-12 left-6 bg-brand-100 flex flex-col gap-3 text-white rounded min-w-[250px] py-3 px-2 bg-opacity-50"
           onMouseLeave={() => setHoverAbout(false)}
         >
           <p

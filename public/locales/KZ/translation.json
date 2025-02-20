@@ -1,8 +1,9 @@
 {
+  "header_menu": "Мәзір",
   "header_about": "Компания туралы",
   "header_about_guide": "Ұшақтарға гид",
   "header_about_news": "Жаңалықтар",
-  "header_about_safety": "Қауіпсіздік",
+  "header_about_safety": "Қауіпсіздік & FAQ",
   "header_passenger": "Жолаушылар чартері",
   "header_cargo": "Жүк чартері",
   "header_vip": "VIP-чартер",

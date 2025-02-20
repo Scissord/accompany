@@ -7,7 +7,7 @@ const Services: FC = () => {
   return (
     <section className="relative bg-white">
       <div className='flex w-full'>
-        <div className="w-0 lg:w-2/5 bg-[url('/pages/about/cards-bg.png')] bg-cover bg-top bg-no-repeat"/>
+        <div className="w-0 lg:w-2/5 bg-[url('/pages/about/passenger.jpg')] bg-cover bg-top bg-no-repeat"/>
         <div className='w-full lg:w-3/5 px-8 lg:px-28 py-12 bg-brand-100 flex flex-col gap-6 text-white'>
           <h1 className='text-2xl font-semibold'>
             {t('about_services_out_services')}
@@ -101,10 +101,10 @@ const Services: FC = () => {
             </p>
           </div>
         </div>
-        <div className="w-0 lg:w-2/5 bg-[url('/pages/about/cards-bg.png')] bg-cover bg-center bg-no-repeat"/>
+        <div className="w-0 lg:w-2/5 bg-[url('/pages/about/cargo.jpg')] bg-cover bg-center bg-no-repeat"/>
       </div>
       <div className='flex w-full'>
-        <div className="w-0 lg:w-2/5 bg-[url('/pages/about/cards-bg.png')] bg-cover bg-bottom bg-no-repeat"/>
+        <div className="w-0 lg:w-2/5 bg-[url('/pages/about/vip.jpg')] bg-cover bg-bottom bg-no-repeat"/>
         <div className='w-full lg:w-3/5 px-8 lg:px-28 py-12 bg-brand-100 flex flex-col gap-6 text-white'>
           <h1 className='text-2xl font-semibold'>
             {t('about_services_out_services')}

@@ -1,4 +1,4 @@
-import { FC, useState } from "react";
+import { FC, useState, useMemo } from "react";
 import DatePicker from "react-datepicker";
 import MenuTop from "./MenuTop";
 import Wrapper from "./Wrapper";
@@ -7,6 +7,8 @@ import "./input.css";
 import "./select.css";
 import { useViewContext } from "@context";
 import { useTranslation } from "react-i18next";
+import airportsData from './airports.json';
+import { debounce } from "lodash";
 
 const css = {
   container: `
@@ -38,6 +40,32 @@ const Menu: FC = () => {
     passengers: localStorage.getItem("passengers") || ""
   })
 
+  const [filteredFromAirports, setFilteredFromAirports] = useState([]);
+  const [filteredToAirports, setFilteredToAirports] = useState([]);
+
+  const filterAirports = (input: string) => {
+    if (!input) return [];
+
+    return Object.values(airportsData)
+      .filter((airport) =>
+        airport.name.toLowerCase().includes(input.toLowerCase()) ||
+        airport.city.toLowerCase().includes(input.toLowerCase()) ||
+        airport.icao.toLowerCase().includes(input.toLowerCase()) ||
+        (airport.iata && airport.iata.toLowerCase().includes(input.toLowerCase()))
+      )
+      .slice(0, 10);
+  };
+
+  const debouncedFromFilterAirports = useMemo(
+    () => debounce((input) => setFilteredFromAirports(filterAirports(input)), 300),
+    []
+  );
+
+  const debouncedToFilterAirports = useMemo(
+    () => debounce((input) => setFilteredToAirports(filterAirports(input)), 300),
+    []
+  );
+
   return (
     <div className={css.container}>
       <MenuTop />
@@ -53,10 +81,25 @@ const Menu: FC = () => {
                 value={userInfo.from}
                 placeholder={t('home_menu_from_placeholder')}
                 onChange={(e) => {
-                  localStorage.setItem('from', e.target.value);
-                  setUserInfo({ ...userInfo, from: e.target.value })
-                }}
+                  const value = e.target.value;
+                  localStorage.setItem('from', value);
+                  setUserInfo({ ...userInfo, from: value });
+                  debouncedFromFilterAirports(value);                }}
               />
+              {filteredFromAirports.length > 0 && (
+                <ul className="absolute top-16 left-0 bg-brand-100 flex flex-col text-white rounded overflow-y-auto w-[250px] bg-opacity-50 py-3 min-h-[50px] max-h-[300px]">
+                  {filteredFromAirports.map((airport) => (
+                    <li className="hover:bg-brand-300 py-1 px-2 cursor-pointer" key={airport.icao} onClick={() => {
+                      const from = `${airport.name} ${airport.icao}`;
+                      localStorage.setItem('from', from);
+                      setUserInfo({ ...userInfo, from });
+                      setFilteredFromAirports([]);
+                    }}>
+                      {airport.name} ({airport.icao})
+                    </li>
+                  ))}
+                </ul>
+              )}
               <div className="right-border-right-top bg-dbg dark:bg-white"></div>
               <div className="right-border-right-bottom bg-dbg dark:bg-white"></div>
             </div>
@@ -87,10 +130,26 @@ const Menu: FC = () => {
                 value={userInfo.to}
                 placeholder={t('home_menu_to_placeholder')}
                 onChange={(e) => {
-                  localStorage.setItem('to', e.target.value);
-                  setUserInfo({ ...userInfo, to: e.target.value })
+                  const value = e.target.value;
+                  localStorage.setItem('to', value);
+                  setUserInfo({ ...userInfo, to: value });
+                  debouncedToFilterAirports(value);
                 }}
               />
+              {filteredToAirports.length > 0 && (
+                <ul className="absolute top-16 left-0 bg-brand-100 flex flex-col text-white rounded overflow-y-auto w-[250px] bg-opacity-50 py-3 min-h-[50px] max-h-[300px]">
+                  {filteredToAirports.map((airport) => (
+                    <li className="hover:bg-brand-300 py-1 px-2 cursor-pointer" key={airport.icao} onClick={() => {
+                      const to = `${airport.name} ${airport.icao}`;
+                      localStorage.setItem('to', to);
+                      setUserInfo({ ...userInfo, to });
+                      setFilteredToAirports([]);
+                    }}>
+                      {airport.name} ({airport.icao})
+                    </li>
+                  ))}
+                </ul>
+              )}
               <div className="right-border-left-top bg-dbg dark:bg-white"></div>
               <div className="right-border-left-bottom bg-dbg dark:bg-white"></div>
             </div>

@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 const Create: FC = () => {
   const { t } = useTranslation();
   const ref = useRef(null);
-  const isInView = useInView(ref);
+  const isInView = useInView(ref, { once: true });
 
   const textVariants = {
     hidden: { opacity: 0, x: -100 },
@@ -13,15 +13,18 @@ const Create: FC = () => {
   };
 
   return (
-    <section className="relative bg-[url('/pages/about/create-bg.png')] bg-cover bg-center bg-dbg text-white">
-      <div className="hidden lg:block absolute inset-0 bg-gradient-to-r w-3/4 from-[#7c7c7c] via-[#bdbbbc] to-transparent" />
+    <section className="relative bg-[url('/pages/about/plane-right.png')] bg-[right_bottom_30%] bg-cover lg:bg-50% bg-no-repeat bg-[#454c56] text-white h-full xl:h-[800px]">
       <div className="lg:hidden absolute inset-0 bg-black bg-opacity-80" />
+      <img src="./pages/about/cloud1.png" className="hidden xl:block absolute left-0 bottom-[-325px]"/>
+      <img src="./pages/about/cloud2.png" className="hidden xl:block absolute right-0 top-[230px] w-2/5"/>
+      <img src="./pages/about/cloud3.png" className="hidden xl:block absolute right-0 top-[-110px]" />
+      <img src="./pages/about/cloud4.png" className="hidden xl:block absolute right-0 bottom-[20px] w-1/2" />
       <div
         ref={ref}
         className="container mx-auto h-full flex flex-col justify-center py-12 px-8 lg:px-0 "
       >
         <motion.h1
-          className="text-3xl font-bold z-10"
+          className="text-2xl lg:text-5xl font-bold z-10"
           variants={textVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
@@ -31,7 +34,7 @@ const Create: FC = () => {
         {t('about_create_title_second')}
         </motion.h1>
         <motion.p
-          className="mt-4 z-10"
+          className="mt-4 text-sm lg:text-xl z-10"
           variants={textVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
@@ -46,7 +49,7 @@ const Create: FC = () => {
           {t('about_create_description_7')}
         </motion.p>
         <motion.p
-          className="mt-4 z-10"
+          className="mt-4 text-sm lg:text-xl z-10"
           variants={textVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
@@ -60,7 +63,7 @@ const Create: FC = () => {
           {t('about_create_description_13')}
         </motion.p>
         <motion.p
-          className="mt-4 z-10"
+          className="mt-4 text-sm lg:text-xl z-10"
           variants={textVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}

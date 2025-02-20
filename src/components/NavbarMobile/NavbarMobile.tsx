@@ -1,6 +1,7 @@
 import { FC, useState } from 'react';
 import { motion } from "framer-motion";
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from "react-i18next";
 import MobileSettings from './MobileSettings';
 
 const css = {
@@ -9,6 +10,7 @@ const css = {
 
 export const NavbarMobile: FC = () => {
   const navigate = useNavigate();
+  const { t } = useTranslation();
   const [isSidebarOpen, setIsSidebarOpen] = useState<boolean>(false);
 
   const handleMenuClick = () => {
@@ -38,18 +40,18 @@ export const NavbarMobile: FC = () => {
             className="fixed top-0 left-0 w-[70%] h-full bg-white z-50 p-5 text-black"
           >
             <div className="flex items-center justify-between text-lg font-bold">
-              <p>Меню</p>
+              <p>{t('header_menu')}</p>
               <MobileSettings/>
             </div>
             <nav className="space-y-4 mt-8">
-              <p className={css.link} onClick={() => navigate("/accompany/about")}>О компании</p>
-              <p className={css.link} onClick={() => navigate("/accompany/air-guide")}>Гид по самолетам</p>
-              <p className={css.link} onClick={() => navigate("/accompany/news")}>Новости</p>
-              <p className={css.link} onClick={() => navigate("/accompany/faq")}>Безопасность</p>
-              <p className={css.link} onClick={() => navigate("/accompany/charters")}>Пассажирский чартер</p>
-              <p className={css.link} onClick={() => navigate("/accompany/charters")}>Грузовой чартер</p>
-              <p className={css.link} onClick={() => navigate("/accompany/charters")}>VIP-чартер</p>
-              <p className={css.link} onClick={() => navigate("/accompany/contacts")}>Контакты</p>
+              <p className={css.link} onClick={() => navigate("/accompany/about")}>{t('header_about')}</p>
+              <p className={css.link} onClick={() => navigate("/accompany/air-guide")}>{t('header_about_guide')}</p>
+              <p className={css.link} onClick={() => navigate("/accompany/news")}>{t('header_about_news')}</p>
+              <p className={css.link} onClick={() => navigate("/accompany/faq")}>{t('header_about_safety')}</p>
+              <p className={css.link} onClick={() => navigate("/accompany/charters")}>{t('header_passenger')}</p>
+              <p className={css.link} onClick={() => navigate("/accompany/charters")}>{t('header_cargo')}</p>
+              <p className={css.link} onClick={() => navigate("/accompany/charters")}>{t('header_vip')}</p>
+              <p className={css.link} onClick={() => navigate("/accompany/contacts")}>{t('header_contacts')}</p>
             </nav>
           </motion.div>
 
