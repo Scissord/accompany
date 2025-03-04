@@ -6,27 +6,29 @@ import Before from './blocks/Before';
 import While from './blocks/While';
 import After from './blocks/After';
 import { Footer } from "@components";
-
-const tabs = [
-  {
-    value: 1,
-    label: 'Перед взлетом',
-    src: 'pages/faq/plane1.svg'
-  },
-  {
-    value: 2,
-    label: 'В полете',
-    src: 'pages/faq/plane2.svg'
-  },
-  {
-    value: 3,
-    label: 'Посадка',
-    src: 'pages/faq/plane3.svg'
-  },
-];
+import { useTranslation } from "react-i18next";
 
 const Faq: FC = () => {
+  const { t } = useTranslation();
   const [tab, setTab] = useState<number>(1);
+  const tabs = [
+    {
+      value: 1,
+      label: t('before_flight'),
+      src: 'pages/faq/plane1.svg'
+    },
+    {
+      value: 2,
+      label: t('in_flight'),
+      src: 'pages/faq/plane2.svg'
+    },
+    {
+      value: 3,
+      label: t('after_flight'),
+      src: 'pages/faq/plane3.svg'
+    },
+  ];
+
   return (
     <>
       <Header/>

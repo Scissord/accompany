@@ -1,5 +1,6 @@
 import { FC, useState, useMemo } from "react";
-import DatePicker from "react-datepicker";
+import DatePicker, { registerLocale } from "react-datepicker";
+import { ru } from 'date-fns/locale/ru';
 import MenuTop from "./MenuTop";
 import Wrapper from "./Wrapper";
 import "react-datepicker/dist/react-datepicker.css";
@@ -9,6 +10,7 @@ import { useViewContext } from "@context";
 import { useTranslation } from "react-i18next";
 import airportsData from './airports.json';
 import { debounce } from "lodash";
+registerLocale('ru', ru);
 
 const css = {
   container: `
@@ -165,12 +167,14 @@ const Menu: FC = () => {
                 }
               }}
               className='h-14 p-2 text-dbg dark:text-white border border-dbg dark:border-white w-full'
-              dateFormat="dd.MM.yyyy h:mm aa"
-              timeInputLabel="Time:"
+              dateFormat="dd.MM.yyyy h:mm"
+              timeInputLabel="Время:"
               popperClassName="z-20"
               popperPlacement="bottom-start"
               portalId="root-portal"
+              // showTimeSelect
               showTimeInput
+              locale='ru'
             />
             {context?.theme.get === 'dark' ? (
               <img
@@ -205,7 +209,7 @@ const Menu: FC = () => {
           </Wrapper>
         </div>
 
-        <button className={css.button}>
+        <button className={css.button} onClick={() => context?.modal.set(true)}>
           {t('home_menu_submit_button')}
         </button>
       </div>

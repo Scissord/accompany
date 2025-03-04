@@ -1,17 +1,16 @@
+import { useTranslation } from "react-i18next";
+
 const Title = () => {
+  const { t } = useTranslation();
+
   return (
     <div className='h-full lg:h-[50vh] bg-dbg text-white'>
       <div className='container mx-auto flex flex-col justify-center gap-8 h-full p-6 lg:px-0'>
         <h1 className='font-bold text-3xl'>
-          Безопасность
+          {t('safety_title')}
         </h1>
         <p className="text-xl">
-          Добро пожаловать в раздел «Часто задаваемые вопросы»! Мы собрали для вас ответы
-          на основные вопросы, связанные с арендой частных самолетов и вертолетов. Здесь вы
-          найдете информацию о том, как забронировать чартерный рейс, узнать детали полета,
-          оформить необходимые документы и многое другое. Мы стремимся сделать процесс
-          организации полета простым и удобным для вас. Если у вас возникнут дополнительные
-          вопросы, наша команда всегда готова помочь.
+          {t('safety_description')}
         </p>
       </div>
     </div>

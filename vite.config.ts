@@ -6,7 +6,6 @@ export default defineConfig({
   plugins: [
     reactRefresh(),
   ],
-  base: '/accompany/',
   css: {
     preprocessorOptions: {
       scss: {

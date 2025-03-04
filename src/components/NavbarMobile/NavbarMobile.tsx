@@ -22,7 +22,7 @@ export const NavbarMobile: FC = () => {
       <div className="container mx-auto h-full fijb lg:hidden px-6">
         <img
           src="logo.png"
-          onClick={() => navigate('/accompany/')}
+          onClick={() => navigate('/')}
           className="w-[24%] sm:w-[20%]"
           alt="logo"
         />
@@ -44,14 +44,14 @@ export const NavbarMobile: FC = () => {
               <MobileSettings/>
             </div>
             <nav className="space-y-4 mt-8">
-              <p className={css.link} onClick={() => navigate("/accompany/about")}>{t('header_about')}</p>
-              <p className={css.link} onClick={() => navigate("/accompany/air-guide")}>{t('header_about_guide')}</p>
-              <p className={css.link} onClick={() => navigate("/accompany/news")}>{t('header_about_news')}</p>
-              <p className={css.link} onClick={() => navigate("/accompany/faq")}>{t('header_about_safety')}</p>
-              <p className={css.link} onClick={() => navigate("/accompany/charters")}>{t('header_passenger')}</p>
-              <p className={css.link} onClick={() => navigate("/accompany/charters")}>{t('header_cargo')}</p>
-              <p className={css.link} onClick={() => navigate("/accompany/charters")}>{t('header_vip')}</p>
-              <p className={css.link} onClick={() => navigate("/accompany/contacts")}>{t('header_contacts')}</p>
+              <p className={css.link} onClick={() => navigate("/about")}>{t('header_about')}</p>
+              <p className={css.link} onClick={() => navigate("/air-guide")}>{t('header_about_guide')}</p>
+              <p className={css.link} onClick={() => navigate("/news")}>{t('header_about_news')}</p>
+              <p className={css.link} onClick={() => navigate("/faq")}>{t('header_about_safety')}</p>
+              <p className={css.link} onClick={() => navigate("/charters")}>{t('header_passenger')}</p>
+              <p className={css.link} onClick={() => navigate("/charters")}>{t('header_cargo')}</p>
+              <p className={css.link} onClick={() => navigate("/charters")}>{t('header_vip')}</p>
+              <p className={css.link} onClick={() => navigate("/contacts")}>{t('header_contacts')}</p>
             </nav>
           </motion.div>
 

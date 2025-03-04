@@ -1,64 +1,64 @@
 import { FC } from 'react'
+import { useTranslation } from "react-i18next";
 
 const Before: FC = () => {
+  const { t } = useTranslation();
+
   return (
     <div className='min-h-[50vh] text-black bg-white py-6'>
       <div className='w-full h-full container mx-auto py-6 px-6 bg-gray-200'>
-        <h1 className='font-bold text-xl'>Перед взлетом</h1>
+        <h1 className='font-bold text-xl'>{t('before_flight')}</h1>
         <p className='font-semibold mt-3'>
-          Что можно и нельзя брать в ручную кладь на борту самолёта
+          {t('before_1')}
         </p>
         <p className='mt-3'>
-          Для комфортного и безопасного полёта важно знать правила перевозки личных вещей
-          в ручной клади. Ниже представлены категории предметов и условия их провоза.
+          {t('before_2')}
         </p>
-
         <h2 className='mt-4 text-brand-300 font-semibold'>
-          Разрешённые предметы
+          {t('before_3')}
         </h2>
         <div className='flex w-full gap-3 lg:gap-0 lg:w-2/3 mt-3'>
           <div className='w-1/2 flex flex-col gap-3 text-brand-300'>
-            <h2>Средства личной гигиены:</h2>
+            <h2>{t('before_4')}</h2>
             <ul className='break-words'>
               <li>
-                &#9679; Дезодорант, репеллент, шампунь, крем от солнца — в ёмкостях до 100 мл и упакованы
-                в пакет 20×20 см.
+                &#9679; {t('before_5')}
               </li>
-              <li>&#9679; Влажные салфетки.</li>
-              <li>&#9679; Электронная сигарета.</li>
-              <li>&#9679; Зубная щётка.</li>
+              <li>&#9679; {t('before_6')}</li>
+              <li>&#9679; {t('before_7')}</li>
+              <li>&#9679; {t('before_8')}</li>
             </ul>
-            <h2 className='mt-4'>Электроника и устройства:</h2>
+            <h2 className='mt-4'>{t('before_9')}</h2>
             <ul className='break-words'>
               <li>
-                &#9679; Телефон, ноутбук,фотоаппарат, электроннаякнига и зарядные устройства.
+                &#9679; {t('before_10')}
               </li>
-              <li>&#9679; Электробритва.</li>
+              <li>&#9679; {t('before_11')}</li>
             </ul>
           </div>
           <div className='w-1/2 flex flex-col gap-3 text-brand-300'>
-            <h2>Лекарства и медицинские товары:</h2>
+            <h2>{t('before_12')}</h2>
             <ul className='break-words'>
               <li>
-                &#9679; Аптечка с таблетками и порошками.<br/>
+                &#9679; {t('before_13')}<br/>
               </li>
               <li>
-                &#9679; Жидкие лекарства до 100 мл (при необходимости — с медицинской справкой).
+                &#9679; {t('before_14')}
               </li>
             </ul>
             <h2 className='mt-4'>Еда:</h2>
             <ul className='break-words'>
               <li>
-                &#9679; Шоколад, орехи, бутербродыи другие твёрдые продукты.
+                &#9679; {t('before_15')}
               </li>
             </ul>
             <h2 className='mt-4'>Прочее:</h2>
             <ul className='break-words'>
               <li>
-                &#9679; Обычная зажигалка (одна штука).
+                &#9679; {t('before_16')}
               </li>
               <li>
-                &#9679; Фен, утюжок, плойка для волос.
+                &#9679; {t('before_17')}
               </li>
             </ul>
           </div>
@@ -66,40 +66,40 @@ const Before: FC = () => {
       </div>
       <div className='w-full h-full container mx-auto py-6 px-6 text-brand-300'>
         <p className='font-semibold'>
-          Запрещённые предметы
+          {t('before_18')}
         </p>
         <div className='flex w-full gap-3 lg:gap-0 lg:w-2/3 mt-3'>
           <div className='w-1/2 flex flex-col gap-3 text-brand-300'>
-            <h2 className='mt-4'>Острые и режущие предметы:</h2>
+            <h2 className='mt-4'>{t('before_19')}</h2>
             <ul className='break-words'>
               <li>
-                &#9679; Штопор, перочинный нож.<br/>
+                &#9679; {t('before_20')}<br/>
               </li>
               <li>
-                &#9679; Маникюрный набор.<br/>
+                &#9679; {t('before_21')}<br/>
               </li>
             </ul>
-            <h2 className='mt-4'>Спортивное снаряжение:</h2>
+            <h2 className='mt-4'>{t('before_22')}</h2>
             <ul className='break-words'>
               <li>
-                &#9679; Треккинговые и лыжные палки.
+                &#9679; {t('before_23')}
               </li>
               <li>
-                &#9679; Костыли.<br/>
+                &#9679; {t('before_24')}<br/>
               </li>
             </ul>
           </div>
           <div className='w-1/2 flex flex-col gap-3 text-brand-300'>
-            <h2 className='mt-4'>Опасные и воспламеняющиеся предметы:</h2>
+            <h2 className='mt-4'>{t('before_25')}</h2>
             <ul className='break-words'>
               <li>
-                &#9679; Жидкость для заправки зажигалок.<br/>
+                &#9679; {t('before_26')}<br/>
               </li>
               <li>
-                &#9679; Фейерверки, петарды и бенгальские огни.<br/>
+                &#9679; {t('before_27')}<br/>
               </li>
               <li>
-                &#9679; Пустая бутылка.<br/>
+                &#9679; {t('before_28')}<br/>
               </li>
             </ul>
           </div>
@@ -108,96 +108,74 @@ const Before: FC = () => {
       <div className='bg-brand-300 h-full lg:h-[30vh] p-6 text-white container mx-auto mt-6'>
         <div className='h-full w-full flex flex-col lg:flex-row items-center justify-between gap-12'>
           <div className='flex flex-col gap-3'>
-            <h1 className='font-semibold text-xl'>Примечание</h1>
+            <h1 className='font-semibold text-xl'>{t('before_29')}</h1>
             <p className='text-lg'>
-              При нарушении этих правил сотрудники службы безопасности имеют право изъять
-              запрещённые предметы. Для жидкостей и аэрозолей применяются особые
-              ограничения: каждая ёмкость должна быть не более 100 мл и упакована в
-              герметичный пакет. Исключения составляют лекарства и детское питание, которые
-              могут понадобиться в полёте.
+              {t('before_30')}
             </p>
           </div>
           <img src="icons/exclamation.svg" className='w-32'/>
         </div>
       </div>
       <div className='mt-6 w-full h-full container mx-auto py-6 px-6 bg-gray-200'>
-        <h1 className='font-bold text-xl'>Правила безопасности полётов ICAO</h1>
+        <h1 className='font-bold text-xl'>{t('before_31')}</h1>
         <p className='font-semibold mt-3'>
-          Правила безопасности, разработанные Международной организацией гражданской
-          авиации (ICAO), направлены на обеспечение безопасности полётов на глобальном
-          уровне. Они охватывают широкий спектр стандартов и практик, которые регулярно
-          обновляются в связи с техническим прогрессом и новыми вызовами отрасли. Ниже
-          представлены основные аспекты.
+          {t('before_32')}
         </p>
         <div className='w-full h-full container mx-auto py-6 px-6 text-brand-300'>
         <div className='flex w-2/3'>
           <div className='break-words flex flex-wrap gap-3 text-brand-300'>
             <li>
-              Annex 1: Лицензирование персонала<br/>
+              {t('before_33')}<br/>
               <p className='py-2 text-black'>
-                Определяет требования к квалификации и подготовке пилотов, диспетчеров,
-                механиков и другого авиационного персонала.
-                Устанавливает минимальные стандарты знаний, опыта и физического состояния.
+                {t('before_34')}
               </p>
             </li>
             <li>
-              Annex 2: Правила полётов<br/>
+              {t('before_35')}<br/>
               <p className='py-2 text-black'>
-                Регламентирует полёты в международном воздушном пространстве и управление
-                воздушным движением (ATM).
-                Описывает действия в нормальных и чрезвычайных ситуациях.
+                {t('before_36')}
               </p>
             </li>
             <li>
-              Annex 3: Метеорологическое обслуживание<br/>
+              {t('before_37')}<br/>
               <p className='py-2 text-black'>
-                Определяет стандарты предоставления прогнозов и предупреждений о погодных
-                условиях.
-                Обеспечивает пилотов и диспетчеров актуальной метеорологической информацией
-                для планирования полётов.
+                {t('before_38')}
               </p>
             </li>
             <li>
-              Annex 4: Карты аэронавигации<br/>
+              {t('before_39')}<br/>
               <p className='py-2 text-black'>
-                Обеспечивает точную информацию о воздушных трассах, навигационных объектах и
-                аэропортах.
+                {t('before_40')}
               </p>
             </li>
             <li>
-              Annex 6: Эксплуатациявоздушных судов<br/>
+              {t('before_41')}<br/>
               <p className='py-2 text-black'>
-                Устанавливает требования к безопасной эксплуатации самолётов и управлению
-                рисками.
-                Регулирует планирование полётов и техническое обслуживание воздушных судов.
+                {t('before_42')}
               </p>
             </li>
             <li>
-              Annex 8: Лётная годность воздушных судов<br/>
+              {t('before_43')}<br/>
               <p className='py-2 text-black'>
-              Включает стандарты сертификации конструкции и оборудования самолётов.
+                {t('before_44')}
               </p>
             </li>
             <li>
-              Annex 11: Обслуживание воздушного движения<br/>
+              {t('before_45')}<br/>
               <p className='py-2 text-black'>
-                Определяет процедуры управления воздушным движением для предотвращения
-                столкновений и безопасного разделения судов.
+                {t('before_46')}
               </p>
             </li>
             <li>
-              Annex 14: Аэродромы<br/>
+              {t('before_47')}<br/>
               <p className='py-2 text-black'>
-                Устанавливает стандарты проектирования и эксплуатации аэропортов, включая
-                системы навигации и аварийные службы..
+                {t('before_48')}
               </p>
             </li>
             <li>
-              Annex 19: Управление безопасностью<br/>
+              {t('before_49')}<br/>
               <p className='py-2 text-black'>
-                Требует внедрения систем управления безопасностью (SMS) для авиаперевозчиков и
-                аэропортов.
-                Включает процессы оценки рисков и постоянного мониторинга уровня безопасности.
+                {t('before_50')}
               </p>
             </li>
           </div>
@@ -207,13 +185,9 @@ const Before: FC = () => {
       <div className='bg-brand-300 h-full lg:h-[30vh] p-6 text-white container mx-auto mt-6'>
         <div className='h-full w-full flex flex-col lg:flex-row items-center justify-between gap-12'>
           <div className='flex flex-col gap-3'>
-            <h1 className='font-semibold text-xl'>Заключение</h1>
+            <h1 className='font-semibold text-xl'>{t('before_51')}</h1>
             <p className='text-lg'>
-              Эти правила безопасности помогают избежать угроз на борту и минимизировать риски,
-              связанные с авиаперевозками. Применение стандартов ICAO и соблюдение правил
-              ручной клади позволяет пассажирам путешествовать безопасно и комфортно.
-              Соблюдение всех норм также ускоряет прохождение контроля в аэропорту,
-              предотвращая возможные задержки.
+              {t('before_52')}
             </p>
           </div>
             <img src="icons/exclamation.svg" className='w-32'/>

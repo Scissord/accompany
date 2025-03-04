@@ -11,47 +11,47 @@ import News from '@pages/News';
 
 const AppRoutes: IRoute[] = [
   {
-		path: "/accompany",
+		path: "/",
 		element: <Home/>,
 		title: "Главная",
 	},
   {
-		path: "/accompany/about",
+		path: "/about",
 		element: <About/>,
 		title: "О нас",
 	},
   {
-		path: "/accompany/air-guide",
+		path: "/air-guide",
 		element: <AirGuide/>,
 		title: "Авиагид",
 	},
   {
-		path: "/accompany/faq",
+		path: "/faq",
 		element: <Faq/>,
 		title: "Безопасность",
 	},
   {
-		path: "/accompany/passenger",
+		path: "/passenger",
 		element: <Passenger/>,
 		title: "Пассажирские чартеры",
 	},
   {
-		path: "/accompany/cargo",
+		path: "/cargo",
 		element: <Cargo/>,
 		title: "Грузовые чартеры",
 	},
   {
-		path: "/accompany/vip",
+		path: "/vip",
 		element: <VIP/>,
 		title: "VIP чартеры",
 	},
   {
-    path: "/accompany/contacts",
+    path: "/contacts",
 		element: <Contacts/>,
 		title: "Контакты",
   },
   {
-    path: "/accompany/news",
+    path: "/news",
 		element: <News/>,
 		title: "Новости",
   },

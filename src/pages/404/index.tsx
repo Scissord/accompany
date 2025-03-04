@@ -8,7 +8,7 @@ const NotFound: FC = () => {
   return (
     <div className='relative h-screen flex items-center justify-center'>
       <button
-        onClick={() => navigate('/accompany/')}
+        onClick={() => navigate('/')}
         className='absolute top-5 left-5 bg-brand-200 text-white px-2 py-1 rounded'
       >
         На главную

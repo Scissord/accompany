@@ -12,7 +12,7 @@ export const HeaderLogo: FC = () => {
         src="logo.png"
         className="w-[60%] cursor-pointer"
         alt="logo"
-        onClick={() => navigate('/accompany/')}
+        onClick={() => navigate('/')}
       />
     </div>
   );

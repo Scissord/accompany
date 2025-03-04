@@ -44,7 +44,7 @@ export const Navbar: FC = () => {
     <nav className="relative flex items-center justify-center gap-12 z-30 h-full w-[70%]">
       <p
         className={css.link}
-        onClick={() => navigate("/accompany/about")}
+        onClick={() => navigate("/about")}
         onMouseEnter={() => setHoverAbout(true)}
       >
         {t('header_about')}
@@ -52,39 +52,39 @@ export const Navbar: FC = () => {
       {hoverAbout && (
         <div
           ref={dropdownRef}
-          className="absolute top-12 left-6 bg-brand-100 flex flex-col gap-3 text-white rounded min-w-[250px] py-3 px-2 bg-opacity-50"
+          className="absolute top-12 xl:top-16 left-6 bg-brand-100 flex flex-col gap-3 text-white rounded min-w-[250px] py-3 px-2 bg-opacity-50"
           onMouseLeave={() => setHoverAbout(false)}
         >
           <p
             className={css.dropMenuLink}
-            onClick={() => handleClickHoverAbout("/accompany/air-guide")}
+            onClick={() => handleClickHoverAbout("/air-guide")}
           >
             {t('header_about_guide')}
           </p>
           <p
             className={css.dropMenuLink}
-            onClick={() => handleClickHoverAbout("/accompany/news")}
+            onClick={() => handleClickHoverAbout("/news")}
           >
             {t('header_about_news')}
           </p>
           <p
             className={css.dropMenuLink}
-            onClick={() => handleClickHoverAbout("/accompany/faq")}
+            onClick={() => handleClickHoverAbout("/faq")}
           >
             {t('header_about_safety')}
           </p>
         </div>
       )}
-      <p className={css.link} onClick={() => navigate("/accompany/passenger")}>
+      <p className={css.link} onClick={() => navigate("/passenger")}>
         {t('header_passenger')}
       </p>
-      <p className={css.link} onClick={() => navigate("/accompany/cargo")}>
+      <p className={css.link} onClick={() => navigate("/cargo")}>
         {t('header_cargo')}
       </p>
-      <p className={css.link} onClick={() => navigate("/accompany/vip")}>
+      <p className={css.link} onClick={() => navigate("/vip")}>
         {t('header_vip')}
       </p>
-      <p className={css.link} onClick={() => navigate("/accompany/contacts")}>
+      <p className={css.link} onClick={() => navigate("/contacts")}>
         {t('header_contacts')}
       </p>
     </nav>

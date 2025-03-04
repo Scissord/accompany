@@ -6,6 +6,7 @@ const options = [
   { value: "1", label: "RU" },
   { value: "2", label: "KZ" },
   { value: "3", label: "EN" },
+  { value: "4", label: "CN" },
 ];
 
 const MobileSettings: FC = () => {

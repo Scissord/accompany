@@ -1,17 +1,21 @@
+import { useTranslation } from "react-i18next"
+
 const Cargo = () => {
+  const { t } = useTranslation();
+
   return (
     <div className='min-h-[20vh] bg-brand-300 text-white py-12'>
       <div className='container mx-auto flex items-center gap-3 px-6 lg:px-0'>
         <div className='w-full lg:w-1/2 flex flex-col gap-3'>
-          <h1 className='text-2xl font-bold'>Авиаперевозки грузов</h1>
+          <h1 className='text-2xl font-bold'>{t('cargo_cargo_title')}</h1>
           <p>
-            На протяжении десятилетий аваперевозка грузов остаётся наиболее быстрым и надёжным способом доставки, обеспечивая безопасность и своевременность. С Avia Consulting Company у вас откроются новые возможности для грузовых авиаперевозок.
+            {t('cargo_cargo_1')}
           </p>
           <p>
-            Наши опытные специалисты гарантируют соблюдение всех технических норм при перевозке грузов по Казахстану. Многолетний опыт и необходимые лицензии позволяют нам безопасно и качественно осуществлять перевозки, включая доставку опасных грузов.
+            {t('cargo_cargo_2')}
           </p>
           <p>
-            Высокая надежность и оперативность делают авиаперевозки всё более популярными для трансконтинентальных маршрутов. Мы готовы доставить груз любой сложности, включая международные перевозки опасных грузов.
+            {t('cargo_cargo_3')}
           </p>
         </div>
         <div className='w-1/2 hidden lg:flex flex-col gap-3'>

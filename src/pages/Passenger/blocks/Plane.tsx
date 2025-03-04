@@ -1,6 +1,8 @@
+import { useTranslation } from "react-i18next";
 import { useState, useRef, useEffect } from 'react';
 
 const Plane = () => {
+  const { t } = useTranslation();
   const [activeIndex, setActiveIndex] = useState(0);
   const sectionRefs = useRef<HTMLDivElement[]>([]);
 
@@ -24,20 +26,20 @@ const Plane = () => {
 
   const descriptions = [
     {
-      title: 'Гибкость и индивидуальный подход',
-      text: 'Чартерные рейсы предоставляют вам полную свободу выбора. Вы сами определяете время вылета и прибытия, а также маршрут, что позволяет избегать пересадок и лишних ожиданий. Мы подберём самолёт под любые ваши потребности, будь то небольшой частный джет или вместительный авиалайнер для группы.',
+      title: t('passengers_plane_title_1'),
+      text: t('passengers_plane_description_1'),
     },
     {
-      title: 'Комфорт и приватность',
-      text: 'Чартерные перевозки обеспечивают высокий уровень комфорта и приватности. Весь рейс будет предоставлен исключительно для вас и вашей группы, что позволяет насладиться полётом в спокойной обстановке и с учётом всех ваших пожеланий.',
+      title: t('passengers_plane_title_2'),
+      text: t('passengers_plane_description_2'),
     },
     {
-      title: 'Экономия времени',
-      text: 'Чартерный рейс позволяет избежать длинных очередей и стандартных процедур аэропорта. Наши клиенты проходят регистрацию и предполётные формальности по упрощённой схеме, что значительно экономит время и делает путешествие более приятным.',
+      title: t('passengers_plane_title_3'),
+      text: t('passengers_plane_description_3'),
     },
     {
-      title: 'Безопасность',
-      text: 'Мы работаем только с сертифицированными авиакомпаниями и тщательно проверяем каждое воздушное судно перед вылетом. Высококвалифицированные экипажи и соблюдение всех стандартов безопасности гарантируют надёжность и спокойствие в пути.',
+      title: t('passengers_plane_title_4'),
+      text: t('passengers_plane_description_4'),
     },
   ];
 
@@ -45,7 +47,7 @@ const Plane = () => {
     <div className='min-h-[50vh] py-12 bg-gray-200'>
       <div className='container mx-auto flex flex-col gap-6 px-6 lg:px-0'>
         <h1 className='text-xl font-bold text-brand-300'>
-          Преимущества грузовых перевозок
+          {t('passengers_plane_title')}
         </h1>
         <div className='flex flex-col lg:flex-row gap-3'>
           <div className='w-full lg:w-1/2'>
