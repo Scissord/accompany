@@ -1,16 +1,28 @@
 import { FC, useRef } from "react";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
+import { useViewContext } from "@context";
 
 const Title: FC = () => {
   const ref = useRef(null);
-
+  const context = useViewContext();
   const { t } = useTranslation();
 
   const textVariants = {
     hidden: { opacity: 0, x: -100 },
     visible: { opacity: 1, x: 0 },
   };
+
+  const css = {
+    button: `
+      py-4 text-sm bg-brand-100 whitespace-nowrap
+      flex items-center justify-center
+      font-semibold dark:hover:bg-white text-sm
+      hover:bg-black hover:bg-opacity-50
+      hover:dark:text-dbg hover:text-white
+      mt-4 lg:hidden w-full
+    `
+  }
 
   return (
     <motion.div
@@ -23,7 +35,7 @@ const Title: FC = () => {
       <motion.h1
         className="text-4xl sm:text-6xl font-bold"
         variants={textVariants}
-        transition={{ duration: 0.8, delay: 0.2 }}
+        transition={{ duration: 0.8, delay: 0.3 }}
       >
         {/*  */}
         {t('home_title')}
@@ -42,6 +54,16 @@ const Title: FC = () => {
         <br />
         {t('home_description_third')}
       </motion.p>
+      <motion.button
+        className={css.button}
+        variants={textVariants}
+        initial="hidden"
+        animate="visible"
+        transition={{ duration: 0.8, delay: 0.7 }}
+        onClick={() => context?.modal.set(true)}
+      >
+        {t('home_menu_submit_button')}
+      </motion.button>
     </motion.div>
   );
 };

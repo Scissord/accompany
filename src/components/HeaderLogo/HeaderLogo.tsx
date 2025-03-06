@@ -6,7 +6,7 @@ export const HeaderLogo: FC = () => {
 
   return (
     <div
-      className='z-30 h-full fi w-[15%]'
+      className='z-30 h-full flex items-center w-[15%]'
     >
       <img
         src="logo.png"

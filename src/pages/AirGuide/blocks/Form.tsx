@@ -1,9 +1,22 @@
 import { FC } from "react";
 import { useViewContext } from "@context";
+import { useTranslation } from "react-i18next";
 import './form.css';
 
 const Form: FC = () => {
+  const { t } = useTranslation();
   const context = useViewContext();
+
+  const css = {
+    button : `
+      w-1/2 dark:bg-white bg-brand-100
+      dark:text-brand-100 text-white p-3
+      font-bold transition duration-300
+      ease-in-out dark:hover:bg-black
+      dark:hover:text-white hover:bg-black
+      hover:text-white
+    `
+  }
 
   return (
     <section className="form">
@@ -11,22 +24,22 @@ const Form: FC = () => {
       <div className="absolute inset-0 bg-gray-500 bg-opacity-50" />
       <div className="container mx-auto py-12 h-full">
         <div className="flex flex-col gap-6 h-full px-8 md:px-0">
-          <p className="text-3xl font-bold z-30">Оставить заявку</p>
-          <p className="z-30">Наименование компании</p>
+          <p className="text-3xl font-bold z-30">{t('home_form_title')}</p>
+          <p className="z-30">{t('home_form_description')}</p>
           <div className="flex items-center justify-between h-full z-30">
             <div className="flex items-start justify-center flex-col gap-6 w-full md:w-2/5 h-full">
               <input
                 type="text"
-                placeholder="Компания"
+                placeholder={t('home_form_first_input')}
                 className="border border-white p-4 w-full"
               />
               <input
                 type="email"
-                placeholder="E-mail"
+                placeholder={t('home_form_second_input')}
                 className="border border-white p-4 w-full"
               />
               <textarea
-                placeholder="Ваше обращение"
+                placeholder={t('home_form_textarea')}
                 className="border border-white p-4 h-full w-full"
               />
             </div>
@@ -34,12 +47,14 @@ const Form: FC = () => {
           </div>
           <div className="flex flex-col md:flex-row items-center gap-3 md:gap-0 justify-between z-30">
             <div className="flex items-center gap-2 w-full md:w-2/5">
-              <button className="w-1/2 bg-white text-brand-100 p-3">Отправить</button>
-              <p className="w-1/2 text-[13px] lg:whitespace-nowrap">Персональная обработка данных</p>
+              <button className={css.button}>{t('home_form_send_button')}</button>
+              <p className="w-1/2 text-[13px] lg:whitespace-nowrap">
+                {t('home_form_politic')}
+              </p>
             </div>
             <div className="w-full md:w-3/5 md:ml-12">
               <button onClick={() => context?.modal.set(true)} className="bg-white text-brand-100 p-3">
-                Заполнить продвинутую форму
+                {t('home_form_open_button')}
               </button>
             </div>
           </div>

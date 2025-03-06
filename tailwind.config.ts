@@ -24,10 +24,6 @@ const config: Config = {
   plugins: [
     function ({ addUtilities }) {
       const newUtilities = {
-        '.fi': {
-          "display": 'flex',
-          "align-items": 'center',
-        },
         '.fijb': {
           'display': 'flex',
           'align-items': 'center',
