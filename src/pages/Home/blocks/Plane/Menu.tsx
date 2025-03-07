@@ -89,14 +89,17 @@ const Menu: FC = () => {
                   debouncedFromFilterAirports(value);                }}
               />
               {filteredFromAirports.length > 0 && (
-                <ul className="absolute top-16 left-0 bg-brand-100 flex flex-col text-white rounded overflow-y-auto w-[250px] bg-opacity-50 py-3 min-h-[50px] max-h-[300px]">
+                <ul className="absolute bottom-[80px] left-0 bg-brand-100 flex flex-col text-white rounded overflow-y-auto w-full bg-opacity-50 py-3 min-h-[50px] max-h-[300px] z-50 shadow-lg">
                   {filteredFromAirports.map((airport) => (
-                    <li className="hover:bg-brand-300 py-1 px-2 cursor-pointer" key={airport.icao} onClick={() => {
-                      const from = `${airport.name} ${airport.iata}`;
-                      localStorage.setItem('from', from);
-                      setUserInfo({ ...userInfo, from });
-                      setFilteredFromAirports([]);
-                    }}>
+                    <li className="hover:bg-brand-300 py-1 px-2 cursor-pointer"
+                      key={airport.icao}
+                      onClick={() => {
+                        const from = `${airport.name} ${airport.iata}`;
+                        localStorage.setItem('from', from);
+                        setUserInfo({ ...userInfo, from });
+                        setFilteredFromAirports([]);
+                      }}
+                    >
                       {airport.name} ({airport.iata})
                     </li>
                   ))}
@@ -139,7 +142,7 @@ const Menu: FC = () => {
                 }}
               />
               {filteredToAirports.length > 0 && (
-                <ul className="absolute top-16 left-0 bg-brand-100 flex flex-col text-white rounded overflow-y-auto w-[250px] bg-opacity-50 py-3 min-h-[50px] max-h-[300px]">
+                <ul className="absolute bottom-[80px] left-0 bg-brand-100 flex flex-col text-white rounded overflow-y-auto w-[250px] bg-opacity-50 py-3 min-h-[50px] max-h-[300px]">
                   {filteredToAirports.map((airport) => (
                     <li className="hover:bg-brand-300 py-1 px-2 cursor-pointer" key={airport.icao} onClick={() => {
                       const to = `${airport.name} ${airport.iata}`;
