@@ -1,10 +1,16 @@
-import { FC } from "react";
+import { FC, useState } from "react";
 import { useViewContext } from "@context";
 import { useTranslation } from "react-i18next";
 
 const Form: FC = () => {
   const context = useViewContext();
   const { t } = useTranslation();
+
+  const [userInfo, setUserInfo] = useState({
+    customer: localStorage.getItem("customer") || "",
+    email: localStorage.getItem("email") || "",
+    additionallyInfo: localStorage.getItem('additionallyInfo') || "",
+  })
 
   const css = {
     button : `
@@ -24,16 +30,31 @@ const Form: FC = () => {
           <div className="flex items-center justify-between h-full">
             <div className="flex items-start justify-center flex-col gap-6 w-full md:w-2/5 h-full">
               <input
+                value={userInfo.customer}
+                onChange={(e) => {
+                  localStorage.setItem('customer', e.target.value);
+                  setUserInfo({ ...userInfo, customer: e.target.value })
+                }}
                 type="text"
                 placeholder={t('home_form_first_input')}
                 className="border border-white p-4 w-full"
               />
               <input
+                value={userInfo.email}
+                onChange={(e) => {
+                  localStorage.setItem('email', e.target.value);
+                  setUserInfo({ ...userInfo, email: e.target.value })
+                }}
                 type="email"
                 placeholder={t('home_form_second_input')}
                 className="border border-white p-4 w-full"
               />
               <textarea
+                value={userInfo.additionallyInfo}
+                onChange={(e) => {
+                  localStorage.setItem('additionallyInfo', e.target.value);
+                  setUserInfo({ ...userInfo, additionallyInfo: e.target.value })
+                }}
                 placeholder={t('home_form_textarea')}
                 className="border border-white p-4 h-full w-full"              />
             </div>
