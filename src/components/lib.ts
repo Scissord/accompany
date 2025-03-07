@@ -1,6 +1,3 @@
-// overall
-export { CW } from './ComponentWrapper/ComponentWrapper';
-
 // ui
 export { HeaderLogo } from './HeaderLogo/HeaderLogo';
 export { Navbar } from './Navbar/Navbar';

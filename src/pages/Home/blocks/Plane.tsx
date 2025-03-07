@@ -6,7 +6,7 @@ const Plane: FC = () => {
   return (
     <section className={`
       relative bg-dbg text-white
-      bg-[url("/pages/main/bg.jpg")]
+      bg-[url("/pages/main/bg.webp")]
       bg-cover bg-center bg-no-repeat
       flex items-center justify-center
       h-full lg:min-h-[70vh]
