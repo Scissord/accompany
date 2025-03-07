@@ -1,12 +1,12 @@
 import { FC } from "react";
-import './footer.css';
 import { useTranslation } from "react-i18next";
+import './footer.css';
 
 export const Footer: FC = () => {
   const { t } = useTranslation();
 
   return (
-    <footer className="min-h-[20vh] lg:min-h-[40vh] dark:bg-brand-100 bg-white dark:text-white text-black py-12 lg:py-20 relative">
+    <footer className="min-h-[20vh] lg:min-h-[40vh] bg-brand-100 text-white py-12 lg:py-20 relative">
       <div className="footer" />
       <div className="container mx-auto h-full px-6 lg:px-0">
         <div className="h-[20vh] w-full flex flex-col lg:flex-row justify-between">

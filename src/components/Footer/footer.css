@@ -10,3 +10,9 @@
   height: auto;
   min-height: 200px;
 }
+
+@media (max-width: 1024px) {
+  .footer {
+    background-image: none; /* Убираем фон */
+  }
+}

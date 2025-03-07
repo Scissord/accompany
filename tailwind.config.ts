@@ -43,8 +43,6 @@ const config: Config = {
       addUtilities(newUtilities);
     }
   ],
-  // eslint-disable-next-line no-undef
-  darkMode: "class",
 }
 
 export default config;

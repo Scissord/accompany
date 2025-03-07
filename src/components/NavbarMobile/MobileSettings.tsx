@@ -19,7 +19,7 @@ const MobileSettings: FC = () => {
         onChange={(val) => context?.language.set(val)}
         options={options}
       />
-      {context?.theme.get === 'dark' ? (
+      {/* {context?.theme.get === 'dark' ? (
         <div
           className='w-5 cursor-pointer'
           onClick={() => context?.theme.set(context?.theme.get === 'dark' ? 'light' : 'dark')}
@@ -33,7 +33,7 @@ const MobileSettings: FC = () => {
         >
           <img src='icons/moon-mobile.svg' className='w-4 h-4' alt='moon'/>
         </div>
-      )}
+      )} */}
     </div>
   );
 };

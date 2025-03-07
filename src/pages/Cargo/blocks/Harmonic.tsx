@@ -35,43 +35,82 @@ const Harmonic = () => {
       id: 1,
       title: t('harmonic_2_title'),
       blocks: [
+        {
+          id: 5,
+          label: t('harmonic_2_1_label'),
+        },
+        {
+          id: 6,
+          label: t('harmonic_2_2_label'),
+        },
+
       ],
       is_visible: false
     },
     {
       id: 2,
       title: t('harmonic_3_title'),
-      blocks: [],
+      blocks: [
+        {
+          id: 7,
+          label: t('harmonic_3_1_label'),
+        },
+      ],
       is_visible: false
     },
     {
       id: 3,
       title: t('harmonic_4_title'),
-      blocks: [],
+      blocks: [
+        {
+          id: 7,
+          label: t('harmonic_4_1_label'),
+        },
+      ],
       is_visible: false
     },
     {
       id: 4,
       title: t('harmonic_5_title'),
-      blocks: [],
+      blocks: [
+        {
+          id: 8,
+          label: t('harmonic_5_1_label'),
+        },
+      ],
       is_visible: false
     },
     {
       id: 5,
       title: t('harmonic_6_title'),
-      blocks: [],
+      blocks: [
+        {
+          id: 8,
+          label: t('harmonic_6_1_label'),
+        },
+      ],
       is_visible: false
     },
     {
       id: 6,
       title: t('harmonic_7_title'),
-      blocks: [],
+      blocks: [
+        {
+          id: 9,
+          label: t('harmonic_7_1_label'),
+        },
+      ],
       is_visible: false
     },
     {
       id: 7,
       title: t('harmonic_8_title'),
-      blocks: [],
+      blocks: [
+        {
+          id: 10,
+          label: t('harmonic_8_1_label'),
+        },
+      ],
       is_visible: false
     },
   ]);

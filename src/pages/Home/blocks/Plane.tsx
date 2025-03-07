@@ -5,8 +5,7 @@ import Menu from "./Plane/Menu";
 const Plane: FC = () => {
   return (
     <section className={`
-      relative dark:bg-dbg
-      text-white bg-brand-300
+      relative bg-dbg text-white
       bg-[url("/pages/main/bg.jpg")]
       bg-cover bg-center bg-no-repeat
       flex items-center justify-center

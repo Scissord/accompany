@@ -14,7 +14,7 @@ registerLocale('ru', ru);
 
 const css = {
   container: `
-    container bg-white dark:bg-brand-300
+    container bg-brand-300
     rounded-xl pt-4 pb-8 px-6 hidden lg:block
     z-20 absolute bottom-[-80px] left-1/2
     -translate-x-1/2 border-8 border-white
@@ -22,10 +22,9 @@ const css = {
   button: `
     h-14 text-sm bg-brand-100 whitespace-nowrap
     px-6 flex items-center justify-center
-    font-semibold dark:hover:bg-white
-    hover:bg-black hover:bg-opacity-50
-    hover:dark:text-dbg hover:text-white
-    transition duration-300 ease-in-out
+    font-semibold hover:bg-white
+    hover:bg-opacity-50 hover:text-dbg
+    transition duration-300 ease-in-out text-white
   `
 }
 
@@ -79,7 +78,7 @@ const Menu: FC = () => {
             <div className="input-wrapper">
               <input
                 type="text"
-                className="first-input text-dbg dark:text-white border border-dbg dark:border-white"
+                className="first-input text-white border border-white"
                 value={userInfo.from}
                 placeholder={t('home_menu_from_placeholder')}
                 onChange={(e) => {
@@ -89,9 +88,9 @@ const Menu: FC = () => {
                   debouncedFromFilterAirports(value);                }}
               />
               {filteredFromAirports.length > 0 && (
-                <ul className="absolute bottom-[80px] left-0 bg-brand-100 flex flex-col text-white rounded overflow-y-auto w-full bg-opacity-50 py-3 min-h-[50px] max-h-[300px] z-50 shadow-lg">
+                <ul className="absolute bottom-[80px] left-0 bg-brand-300 flex flex-col text-white rounded overflow-y-auto w-full bg-opacity-50 py-3 min-h-[50px] max-h-[300px] z-50 shadow-lg">
                   {filteredFromAirports.map((airport) => (
-                    <li className="hover:bg-brand-300 py-1 px-2 cursor-pointer"
+                    <li className="hover:bg-brand-100 py-1 px-2 cursor-pointer"
                       key={airport.icao}
                       onClick={() => {
                         const from = `${airport.name} ${airport.iata}`;
@@ -105,23 +104,14 @@ const Menu: FC = () => {
                   ))}
                 </ul>
               )}
-              <div className="right-border-right-top bg-dbg dark:bg-white"></div>
-              <div className="right-border-right-bottom bg-dbg dark:bg-white"></div>
+              <div className="right-border-right-top bg-white"></div>
+              <div className="right-border-right-bottom bg-white"></div>
             </div>
-            {context?.theme.get === 'dark' ? (
-              <img
-                className="w-4 absolute right-[-14px] top-11 z-20"
-                src="icons/left-right-arrows-white.svg"
-                alt="arrows.svg"
-              />
-            ) : (
-              <img
-                className="w-4 absolute right-[-14px] top-11 z-20"
-                src="icons/left-right-arrows-dark.svg"
-                alt="arrows.svg"
-              />
-            )}
-
+            <img
+              className="w-4 absolute right-[-14px] top-11 z-20"
+              src="icons/left-right-arrows-white.svg"
+              alt="arrows.svg"
+            />
           </Wrapper>
 
           <Wrapper
@@ -131,7 +121,7 @@ const Menu: FC = () => {
             <div className="input-wrapper">
               <input
                 type="text"
-                className="second-input text-dbg dark:text-white border border-dbg dark:border-white"
+                className="second-input text-white border border-white"
                 value={userInfo.to}
                 placeholder={t('home_menu_to_placeholder')}
                 onChange={(e) => {
@@ -142,9 +132,9 @@ const Menu: FC = () => {
                 }}
               />
               {filteredToAirports.length > 0 && (
-                <ul className="absolute bottom-[80px] left-0 bg-brand-100 flex flex-col text-white rounded overflow-y-auto w-[250px] bg-opacity-50 py-3 min-h-[50px] max-h-[300px]">
+                <ul className="absolute bottom-[80px] left-0 bg-brand-300 flex flex-col text-white rounded overflow-y-auto w-full bg-opacity-50 py-3 min-h-[50px] max-h-[300px] z-50 shadow-lg">
                   {filteredToAirports.map((airport) => (
-                    <li className="hover:bg-brand-300 py-1 px-2 cursor-pointer" key={airport.icao} onClick={() => {
+                    <li className="hover:bg-brand-100 py-1 px-2 cursor-pointer" key={airport.icao} onClick={() => {
                       const to = `${airport.name} ${airport.iata}`;
                       localStorage.setItem('to', to);
                       setUserInfo({ ...userInfo, to });
@@ -155,8 +145,8 @@ const Menu: FC = () => {
                   ))}
                 </ul>
               )}
-              <div className="right-border-left-top bg-dbg dark:bg-white"></div>
-              <div className="right-border-left-bottom bg-dbg dark:bg-white"></div>
+              <div className="right-border-left-top bg-white"></div>
+              <div className="right-border-left-bottom bg-white"></div>
             </div>
           </Wrapper>
 
@@ -169,7 +159,7 @@ const Menu: FC = () => {
                   setUserInfo({ ...userInfo, startDate: date })
                 }
               }}
-              className='h-14 p-2 text-dbg dark:text-white border border-dbg dark:border-white w-full'
+              className='h-14 p-2 text-white border border-white w-full'
               dateFormat="dd.MM.yyyy h:mm"
               timeInputLabel="Время:"
               popperClassName="z-20"
@@ -179,20 +169,11 @@ const Menu: FC = () => {
               showTimeInput
               locale='ru'
             />
-            {context?.theme.get === 'dark' ? (
-              <img
-                className="w-4 absolute bottom-5 right-3"
-                src="icons/calendar-white.svg"
-                alt="calendar.svg"
-              />
-            ) : (
-              <img
-                className="w-4 absolute bottom-5 right-3"
-                src="icons/calendar-dark.svg"
-                alt="calendar.svg"
-              />
-            )}
-
+            <img
+              className="w-4 absolute bottom-5 right-3"
+              src="icons/calendar-white.svg"
+              alt="calendar.svg"
+            />
           </Wrapper>
 
           <Wrapper
@@ -201,7 +182,7 @@ const Menu: FC = () => {
           >
             <input
               type="text"
-              className="h-14 p-2 text-dbg dark:text-white border border-dbg dark:border-white"
+              className="h-14 p-2 text-white border border-white"
               value={userInfo.passengers}
               placeholder={t('home_menu_passengers_placeholder')}
               onChange={(e) => {

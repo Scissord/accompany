@@ -9,12 +9,10 @@ const Form: FC = () => {
 
   const css = {
     button : `
-      w-1/2 dark:bg-white bg-brand-100
-      dark:text-brand-100 text-white p-3
-      font-bold transition duration-300
-      ease-in-out dark:hover:bg-black
-      dark:hover:text-white hover:bg-black
-      hover:text-white
+      w-1/2 bg-white text-brand-100
+      p-3 font-bold transition
+      duration-300 ease-in-out
+      hover:text-white hover:bg-black
     `
   }
 

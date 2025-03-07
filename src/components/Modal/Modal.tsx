@@ -112,9 +112,8 @@ export const Modal: FC = () => {
     button: `
       h-14 text-sm bg-brand-100 whitespace-nowrap
       px-6 flex items-center justify-center
-      font-semibold dark:hover:bg-white
-      hover:bg-black hover:bg-opacity-50
-      hover:dark:text-dbg hover:text-white
+      font-semibold hover:bg-white
+      hover:bg-opacity-50 hover:text-dbg
       transition duration-300 ease-in-out text-white
     `
   };
@@ -133,7 +132,7 @@ export const Modal: FC = () => {
               ✖
             </button>
           </div>
-          <p>*Обязательные поля для заполнения</p>
+          <p className='col-span-full'>*Обязательные поля для заполнения</p>
           <p className='text-xl font-bold'>Информация о перелете*</p>
           <div className='lg:col-span-2 flex flex-col gap-6 w-full'>
             <div className='flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4'>
@@ -145,10 +144,7 @@ export const Modal: FC = () => {
                   localStorage.setItem('from', e.target.value);
                   setUserInfo({ ...userInfo, from: e.target.value })
                 }}
-                className={`
-                  w-full lg:w-1/2 border py-2 px-4
-                  ${context?.theme.get === 'dark' ? 'border-white' : 'border-dbg'}
-                `}
+                className="w-full lg:w-1/2 border py-2 px-4 border-white"
               />
               <input
                 type='text'
@@ -158,10 +154,7 @@ export const Modal: FC = () => {
                   localStorage.setItem('to', e.target.value);
                   setUserInfo({ ...userInfo, to: e.target.value })
                 }}
-                className={`
-                  w-full lg:w-1/2 border py-2 px-4
-                  ${context?.theme.get === 'dark' ? 'border-white' : 'border-dbg'}
-                `}
+                className="w-full lg:w-1/2 border py-2 px-4 border-white"
               />
             </div>
             <div className='flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4'>
@@ -174,10 +167,7 @@ export const Modal: FC = () => {
                       setUserInfo({ ...userInfo, startDate: date })
                     }
                   }}
-                  className={`
-                    w-full border py-2 px-4
-                    ${context?.theme.get === 'dark' ? 'border-white' : 'border-dbg'}
-                  `}
+                  className="w-full border py-2 px-4 border-white"
                   popperClassName="z-60"
                   wrapperClassName='w-full'
                   dateFormat="dd.MM.yyyy h:mm"
@@ -200,10 +190,7 @@ export const Modal: FC = () => {
                       setUserInfo({ ...userInfo, endDate: date })
                     }
                   }}
-                  className={`
-                    w-full border py-2 px-4
-                    ${context?.theme.get === 'dark' ? 'border-white' : 'border-dbg'}
-                  `}
+                  className="w-full border py-2 px-4 border-white"
                   popperClassName="z-60"
                   wrapperClassName='w-full'
                   dateFormat="dd.MM.yyyy h:mm"
@@ -231,10 +218,7 @@ export const Modal: FC = () => {
                   localStorage.setItem('passengers', e.target.value);
                   setUserInfo({ ...userInfo, passengers: e.target.value })
                 }}
-                className={`
-                  w-full border py-2 px-4
-                  ${context?.theme.get === 'dark' ? 'border-white' : 'border-dbg'}
-                `}
+                className="w-full border py-2 px-4 border-white"
               />
             </div>
           </div>
@@ -249,10 +233,7 @@ export const Modal: FC = () => {
                   localStorage.setItem('customer', e.target.value);
                   setUserInfo({ ...userInfo, customer: e.target.value })
                 }}
-                className={`
-                  w-full border py-2 px-4
-                  ${context?.theme.get === 'dark' ? 'border-white' : 'border-dbg'}
-                `}
+                className="w-full border py-2 px-4 border-white"
               />
             </div>
             <div className='flex items-center w-full gap-3'>
@@ -280,10 +261,7 @@ export const Modal: FC = () => {
                 localStorage.setItem('face', e.target.value);
                 setUserInfo({ ...userInfo, face: e.target.value })
               }}
-              className={`
-                w-full border py-2 px-4
-                ${context?.theme.get === 'dark' ? 'border-white' : 'border-dbg'}
-              `}
+              className="w-full border py-2 px-4 border-white"
             />
           </div>
           <p className='text-xl font-bold'>Email*</p>
@@ -296,10 +274,7 @@ export const Modal: FC = () => {
                 localStorage.setItem('email', e.target.value);
                 setUserInfo({ ...userInfo, email: e.target.value })
               }}
-              className={`
-                w-full border py-2 px-4
-                ${context?.theme.get === 'dark' ? 'border-white' : 'border-dbg'}
-              `}
+              className="w-full border py-2 px-4 border-white"
             />
           </div>
           <p className='text-xl font-bold'>Телефон*</p>
@@ -312,10 +287,7 @@ export const Modal: FC = () => {
                 localStorage.setItem('phone', e.target.value);
                 setUserInfo({ ...userInfo, phone: e.target.value })
               }}
-              className={`
-                w-full border py-2 px-4
-                ${context?.theme.get === 'dark' ? 'border-white' : 'border-dbg'}
-              `}
+              className="w-full border py-2 px-4 border-white"
             />
           </div>
           <p className='text-xl font-bold'>Дополнительные услуги</p>
@@ -416,10 +388,7 @@ export const Modal: FC = () => {
                     setUserInfo({ ...userInfo, additionallyInfo: e.target.value })
                   }}
                   placeholder='...'
-                  className={`
-                    border py-2 px-4 min-h-[200px]
-                    ${context?.theme.get === 'dark' ? 'border-white' : 'border-dbg'}
-                  `}
+                  className="border py-2 px-4 min-h-[200px] border-white"
                 >
                 </textarea>
               </div>

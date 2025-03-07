@@ -8,12 +8,10 @@ const Form: FC = () => {
 
   const css = {
     button : `
-      w-1/2 dark:bg-white bg-brand-100
-      dark:text-brand-100 text-white p-3
-      font-bold transition duration-300
-      ease-in-out dark:hover:bg-black
-      dark:hover:text-white hover:bg-black
-      hover:text-white
+      w-1/2 bg-white text-brand-100
+      p-3 font-bold transition
+      duration-300 ease-in-out
+      hover:text-white hover:bg-black
     `
   }
 
@@ -28,19 +26,19 @@ const Form: FC = () => {
               <input
                 type="text"
                 placeholder={t('home_form_first_input')}
-                className="border dark:border-white border-dbg p-4 w-full"
+                className="border border-white p-4 w-full"
               />
               <input
                 type="email"
                 placeholder={t('home_form_second_input')}
-                className="border dark:border-white border-dbg p-4 w-full"
+                className="border border-white p-4 w-full"
               />
               <textarea
                 placeholder={t('home_form_textarea')}
-                className="border dark:border-white border-dbg p-4 h-full w-full"
+                className="border border-white p-4 h-full w-full"
               />
             </div>
-            <div className="hidden md:block h-full w-3/5 dark:bg-white bg-gray-300 ml-12"/>
+            <div className="hidden md:block h-full w-3/5 bg-white ml-12"/>
           </div>
           <div className="flex flex-col md:flex-row items-center gap-3 md:gap-0 justify-between">
             <div className="flex items-center gap-2 w-full md:w-2/5">

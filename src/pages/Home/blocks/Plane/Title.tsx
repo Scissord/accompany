@@ -17,9 +17,8 @@ const Title: FC = () => {
     button: `
       py-4 text-sm bg-brand-100 whitespace-nowrap
       flex items-center justify-center
-      font-semibold dark:hover:bg-white text-sm
-      hover:bg-black hover:bg-opacity-50
-      hover:dark:text-dbg hover:text-white
+      font-semibold hover:bg-white text-sm
+      hover:bg-opacity-50 text-dbg
       mt-4 lg:hidden w-full
     `
   }
